@@ -19,7 +19,7 @@ before_install:
 script:
   - mkdir -p build
   - cd build
-  - cmake .. -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON -DCODE_COVERAGE=ON
+  - cmake .. -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON -DBUILD_TESTS=ON -DCODE_COVERAGE=ON
   - cmake --build .
   - ctest --output-on-failure
 
