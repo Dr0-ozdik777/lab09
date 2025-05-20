@@ -1,0 +1,29 @@
+language: cpp
+
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - g++-9
+      - lcov
+      - libgtest-dev
+      - python3-pip
+
+before_install:
+  - pip3 install --user cpp-coveralls
+
+script:
+  - mkdir -p build
+  - cd build
+  - cmake .. -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON -DCODE_COVERAGE=ON
+  - cmake --build .
+  - ctest --output-on-failure
+
+after_success:
+  - lcov --directory . --capture --output-file coverage.info
+  - lcov --remove coverage.info '/usr/*' '*/tests/*' --output-file coverage.info
+  - coveralls --lcov-file coverage.info
