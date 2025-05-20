@@ -1,0 +1,2579 @@
+ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-59-generic aarch64)
+
+
+ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~$ alias gsed=sed
+ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
+~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ 
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  CMakeLists.txt  LB_03.txt  LB_04_1.txt  print.hpp  README.md  tests  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd tests
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/tests$ ls
+print.hpp  test1.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/tests$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build
+CMake Deprecation Warning at third-party/gtest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/googlemock/CMakeLists.txt:39 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Configuring done (0.1s)
+CMake Error at CMakeLists.txt:9 (add_library):
+  Cannot find source file:
+
+    print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:9 (add_library):
+  No SOURCES given to target: print_lib
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+gmake: *** [Makefile:295: cmake_check_build_system] Error 1
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/googlemock/CMakeLists.txt:39 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Configuring done (0.1s)
+CMake Error at CMakeLists.txt:9 (add_library):
+  Cannot find source file:
+
+    print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:9 (add_library):
+  No SOURCES given to target: print_lib
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+gmake: *** [Makefile:295: cmake_check_build_system] Error 1
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano print.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -r _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at third-party/gtest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/googlemock/CMakeLists.txt:39 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at third-party/gtest/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found Python: /usr/bin/python3.12 (found version "3.12.3") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build
+[  8%] Building CXX object CMakeFiles/print_lib.dir/print.cpp.o
+[ 16%] Linking CXX static library libprint_lib.a
+[ 16%] Built target print_lib
+[ 25%] Building CXX object third-party/gtest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 33%] Linking CXX static library ../../../lib/libgtest.a
+[ 33%] Built target gtest
+[ 41%] Building CXX object third-party/gtest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 50%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 50%] Built target gtest_main
+[ 58%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o
+[ 66%] Linking CXX executable check
+[ 66%] Built target check
+[ 75%] Building CXX object third-party/gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 83%] Linking CXX static library ../../../lib/libgmock.a
+[ 83%] Built target gmock
+[ 91%] Building CXX object third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[100%] Linking CXX static library ../../../lib/libgmock_main.a
+[100%] Built target gmock_main
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$  cmake --build _build --target test
+Running tests...
+Test project /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+    Start 1: check
+1/1 Test #1: check ............................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.03 sec
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ _build/check
+Running main() from /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/third-party/gtest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Print
+[ RUN      ] Print.InFileStream
+[       OK ] Print.InFileStream (0 ms)
+[----------] 1 test from Print (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build --target test -- ARGS=--verbose
+Running tests...
+UpdateCTestConfiguration  from :/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build/DartConfiguration.tcl
+Test project /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: check
+
+1: Test command: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build/check
+1: Working Directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+1: Test timeout computed to be: 9999879
+1: Running main() from /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/third-party/gtest/googletest/src/gtest_main.cc
+1: [==========] Running 1 test from 1 test suite.
+1: [----------] Global test environment set-up.
+1: [----------] 1 test from Print
+1: [ RUN      ] Print.InFileStream
+1: [       OK ] Print.InFileStream (0 ms)
+1: [----------] 1 test from Print (0 ms total)
+1: 
+1: [----------] Global test environment tear-down
+1: [==========] 1 test from 1 test suite ran. (0 ms total)
+1: [  PASSED  ] 1 test.
+1/1 Test #1: check ............................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.00 sec
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i 's/lab04/lab05/g' README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i 's/\(DCMAKE_INSTALL_PREFIX=_install\)/\1 -DBUILD_TESTS=ON/' .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i '/cmake --build _build --target install/a\
+> - cmake --build _build --target test -- ARGS=--verbose
+' .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Traceback (most recent call last):
+	14: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `<main>'
+	13: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `eval'
+	12: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `<main>'
+	11: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:304:in `activate_bin_path'
+	10: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:304:in `synchronize'
+	 9: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:305:in `block in activate_bin_path'
+	 8: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1443:in `activate'
+	 7: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `activate_dependencies'
+	 6: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `each'
+	 5: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1475:in `block in activate_dependencies'
+	 4: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1443:in `activate'
+	 3: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `activate_dependencies'
+	 2: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `each'
+	 1: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1472:in `block in activate_dependencies'
+/home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/dependency.rb:311:in `to_specs': Could not find 'base64' (>= 0) among 61 total gem(s) (Gem::MissingSpecError)
+Checked in 'GEM_PATH=/home/ubuntu/.rvm/gems/ruby-2.5.9:/home/ubuntu/.rvm/gems/ruby-2.5.9@global', execute `gem env` for more information
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gem install bundler
+^CERROR:  Interrupted
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gem install bundler
+Fetching: bundler-2.6.9.gem (100%)
+ERROR:  Error installing bundler:
+	The last version of bundler (>= 0) to support your Ruby & RubyGems was 2.3.27. Try installing it with `gem install bundler -v 2.3.27`
+	bundler requires Ruby version >= 3.1.0. The current ruby version is 2.5.0.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat .travis.yml
+language: cpp
+
+script:
+- cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON
+- cmake --build _build
+- cmake --build _build --target install
+- cmake --build _build --target test -- ARGS=--verbose
+
+addons:
+  apt:
+    sources:
+      - george-edison55-precise-backports
+    packages:
+      - cmake
+      - cmake-data
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Traceback (most recent call last):
+	14: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `<main>'
+	13: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `eval'
+	12: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `<main>'
+	11: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:304:in `activate_bin_path'
+	10: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:304:in `synchronize'
+	 9: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:305:in `block in activate_bin_path'
+	 8: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1443:in `activate'
+	 7: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `activate_dependencies'
+	 6: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `each'
+	 5: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1475:in `block in activate_dependencies'
+	 4: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1443:in `activate'
+	 3: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `activate_dependencies'
+	 2: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `each'
+	 1: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1472:in `block in activate_dependencies'
+/home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/dependency.rb:311:in `to_specs': Could not find 'base64' (>= 0) among 61 total gem(s) (Gem::MissingSpecError)
+Checked in 'GEM_PATH=/home/ubuntu/.rvm/gems/ruby-2.5.9:/home/ubuntu/.rvm/gems/ruby-2.5.9@global', execute `gem env` for more information
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gem install bundler -v 2.3.27
+Fetching: bundler-2.3.27.gem (100%)
+Successfully installed bundler-2.3.27
+Parsing documentation for bundler-2.3.27
+Installing ri documentation for bundler-2.3.27
+Done installing documentation for bundler after 0 seconds
+1 gem installed
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Traceback (most recent call last):
+	14: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `<main>'
+	13: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `eval'
+	12: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `<main>'
+	11: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:304:in `activate_bin_path'
+	10: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:304:in `synchronize'
+	 9: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems.rb:305:in `block in activate_bin_path'
+	 8: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1443:in `activate'
+	 7: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `activate_dependencies'
+	 6: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `each'
+	 5: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1475:in `block in activate_dependencies'
+	 4: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1443:in `activate'
+	 3: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `activate_dependencies'
+	 2: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1461:in `each'
+	 1: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/specification.rb:1472:in `block in activate_dependencies'
+/home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/dependency.rb:311:in `to_specs': Could not find 'base64' (>= 0) among 62 total gem(s) (Gem::MissingSpecError)
+Checked in 'GEM_PATH=/home/ubuntu/.rvm/gems/ruby-2.5.9:/home/ubuntu/.rvm/gems/ruby-2.5.9@global', execute `gem env` for more information
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gem install travis
+Fetching: ruby2_keywords-0.0.5.gem (100%)
+Successfully installed ruby2_keywords-0.0.5
+Fetching: base64-0.2.0.gem (100%)
+Successfully installed base64-0.2.0
+ERROR:  Error installing travis:
+	The last version of travis (>= 0) to support your Ruby & RubyGems was 1.11.1. Try installing it with `gem install travis -v 1.11.1`
+	travis requires Ruby version >= 3.2.0. The current ruby version is 2.5.0.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Traceback (most recent call last):
+	6: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `<main>'
+	5: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/ruby_executable_hooks:22:in `eval'
+	4: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `<main>'
+	3: from /home/ubuntu/.rvm/gems/ruby-2.5.9/bin/travis:25:in `load'
+	2: from /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/bin/travis:9:in `<top (required)>'
+	1: from /home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/core_ext/kernel_require.rb:54:in `require'
+/home/ubuntu/.rvm/rubies/ruby-2.5.9/lib/ruby/site_ruby/2.5.0/rubygems/core_ext/kernel_require.rb:54:in `require': /home/ubuntu/.rvm/gems/ruby-2.5.9/gems/travis-1.14.0/lib/travis/cli.rb:116: syntax error, unexpected ']' (SyntaxError)
+...    then command_name(name[2..])
+...                              ^
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rvm install 3.2.0
+Searching for binary rubies, this might take some time.
+No binary rubies available for: ubuntu/24.04/aarch64/ruby-3.2.0.
+Continuing with compilation. Please read 'rvm help mount' to get more information on binary rubies.
+Installing Ruby from source to: /home/ubuntu/.rvm/rubies/ruby-3.2.0, this may take a while depending on your cpu(s)...
+ruby-3.2.0 - #downloading ruby-3.2.0, this may take a while depending on your connection...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 19.4M  100 19.4M    0     0  11.3M      0  0:00:01  0:00:01 --:--:-- 11.3M
+ruby-3.2.0 - #extracting ruby-3.2.0 to /home/ubuntu/.rvm/src/ruby-3.2.0.....
+ruby-3.2.0 - #autogen.sh.
+ruby-3.2.0 - #configuring.........................................................|
+ruby-3.2.0 - #post-configuration..
+ruby-3.2.0 - #compiling...........................................................|
+ruby-3.2.0 - #installing......................
+ruby-3.2.0 - #making binaries executable...
+Installed rubygems 3.4.1 is newer than 3.0.9 provided with installed ruby, skipping installation, use --force to force installation.
+ruby-3.2.0 - #gemset created /home/ubuntu/.rvm/gems/ruby-3.2.0@global
+ruby-3.2.0 - #importing gemset /home/ubuntu/.rvm/gemsets/global.gems..............-
+ruby-3.2.0 - #generating global wrappers........
+ruby-3.2.0 - #gemset created /home/ubuntu/.rvm/gems/ruby-3.2.0
+ruby-3.2.0 - #importing gemsetfile /home/ubuntu/.rvm/gemsets/default.gems evaluated to empty gem list
+ruby-3.2.0 - #generating default wrappers........
+ruby-3.2.0 - #adjusting #shebangs for (gem irb erb ri rdoc testrb rake).
+Install of ruby-3.2.0 - #complete 
+Ruby was built without documentation, to build it run: rvm docs generate-ri
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rvm use 3.2.0 --default
+Using /home/ubuntu/.rvm/gems/ruby-3.2.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Command 'travis' not found, but can be installed with:
+sudo snap install travis  # version 1.8.9, or
+sudo apt  install travis  # version 220729-1
+See 'snap info travis' for additional versions.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gem install travis
+Fetching connection_pool-2.5.3.gem
+Fetching ffi-1.17.2-aarch64-linux-gnu.gem
+Fetching typhoeus-1.4.1.gem
+Fetching net-http-pipeline-1.0.1.gem
+Fetching net-http-persistent-4.0.5.gem
+Fetching faraday-net_http-3.0.2.gem
+Fetching multi_json-1.15.0.gem
+Fetching ethon-0.16.0.gem
+Fetching faraday-2.7.12.gem
+Fetching faraday-typhoeus-1.1.0.gem
+Fetching faraday-retry-2.3.1.gem
+Fetching public_suffix-6.0.2.gem
+Fetching addressable-2.8.7.gem
+Fetching concurrent-ruby-1.3.5.gem
+Fetching tzinfo-2.0.6.gem
+Fetching i18n-1.14.7.gem
+Fetching activesupport-7.0.8.7.gem
+Fetching travis-gh-0.21.0.gem
+Fetching rack-3.1.15.gem
+Fetching rack-test-2.1.0.gem
+Fetching websocket-1.2.11.gem
+Fetching pusher-client-0.6.2.gem
+Fetching launchy-2.5.2.gem
+Fetching json_pure-2.6.3.gem
+Fetching highline-2.1.0.gem
+Fetching faraday-rack-2.1.2.gem
+Fetching travis-1.14.0.gem
+Successfully installed net-http-pipeline-1.0.1
+Successfully installed connection_pool-2.5.3
+Successfully installed net-http-persistent-4.0.5
+Successfully installed multi_json-1.15.0
+Successfully installed ffi-1.17.2-aarch64-linux-gnu
+Successfully installed ethon-0.16.0
+Successfully installed typhoeus-1.4.1
+Successfully installed faraday-net_http-3.0.2
+Successfully installed faraday-2.7.12
+Successfully installed faraday-typhoeus-1.1.0
+Successfully installed faraday-retry-2.3.1
+Successfully installed public_suffix-6.0.2
+Successfully installed addressable-2.8.7
+Successfully installed concurrent-ruby-1.3.5
+Successfully installed tzinfo-2.0.6
+Successfully installed i18n-1.14.7
+Successfully installed activesupport-7.0.8.7
+Successfully installed travis-gh-0.21.0
+Successfully installed rack-3.1.15
+Successfully installed rack-test-2.1.0
+Successfully installed websocket-1.2.11
+Successfully installed pusher-client-0.6.2
+Successfully installed launchy-2.5.2
+Successfully installed json_pure-2.6.3
+Successfully installed highline-2.1.0
+Successfully installed faraday-rack-2.1.2
+Successfully installed travis-1.14.0
+Parsing documentation for net-http-pipeline-1.0.1
+Installing ri documentation for net-http-pipeline-1.0.1
+Parsing documentation for connection_pool-2.5.3
+Installing ri documentation for connection_pool-2.5.3
+Parsing documentation for net-http-persistent-4.0.5
+Installing ri documentation for net-http-persistent-4.0.5
+Parsing documentation for multi_json-1.15.0
+Installing ri documentation for multi_json-1.15.0
+Parsing documentation for ffi-1.17.2-aarch64-linux-gnu
+Installing ri documentation for ffi-1.17.2-aarch64-linux-gnu
+Parsing documentation for ethon-0.16.0
+Installing ri documentation for ethon-0.16.0
+Parsing documentation for typhoeus-1.4.1
+Installing ri documentation for typhoeus-1.4.1
+Parsing documentation for faraday-net_http-3.0.2
+Installing ri documentation for faraday-net_http-3.0.2
+Parsing documentation for faraday-2.7.12
+Installing ri documentation for faraday-2.7.12
+Parsing documentation for faraday-typhoeus-1.1.0
+Installing ri documentation for faraday-typhoeus-1.1.0
+Parsing documentation for faraday-retry-2.3.1
+Installing ri documentation for faraday-retry-2.3.1
+Parsing documentation for public_suffix-6.0.2
+Installing ri documentation for public_suffix-6.0.2
+Parsing documentation for addressable-2.8.7
+Installing ri documentation for addressable-2.8.7
+Parsing documentation for concurrent-ruby-1.3.5
+Installing ri documentation for concurrent-ruby-1.3.5
+Parsing documentation for tzinfo-2.0.6
+Installing ri documentation for tzinfo-2.0.6
+Parsing documentation for i18n-1.14.7
+Installing ri documentation for i18n-1.14.7
+Parsing documentation for activesupport-7.0.8.7
+Installing ri documentation for activesupport-7.0.8.7
+Parsing documentation for travis-gh-0.21.0
+Installing ri documentation for travis-gh-0.21.0
+Parsing documentation for rack-3.1.15
+Installing ri documentation for rack-3.1.15
+Parsing documentation for rack-test-2.1.0
+Installing ri documentation for rack-test-2.1.0
+Parsing documentation for websocket-1.2.11
+Installing ri documentation for websocket-1.2.11
+Parsing documentation for pusher-client-0.6.2
+Installing ri documentation for pusher-client-0.6.2
+Parsing documentation for launchy-2.5.2
+Installing ri documentation for launchy-2.5.2
+Parsing documentation for json_pure-2.6.3
+Installing ri documentation for json_pure-2.6.3
+Parsing documentation for highline-2.1.0
+Installing ri documentation for highline-2.1.0
+Parsing documentation for faraday-rack-2.1.2
+Installing ri documentation for faraday-rack-2.1.2
+Parsing documentation for travis-1.14.0
+Installing ri documentation for travis-1.14.0
+Done installing documentation for net-http-pipeline, connection_pool, net-http-persistent, multi_json, ffi, ethon, typhoeus, faraday-net_http, faraday, faraday-typhoeus, faraday-retry, public_suffix, addressable, concurrent-ruby, tzinfo, i18n, activesupport, travis-gh, rack, rack-test, websocket, pusher-client, launchy, json_pure, highline, faraday-rack, travis after 6 seconds
+27 gems installed
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Hooray, .travis.yml looks valid :)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add tests
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add -p
+diff --git a/README.md b/README.md
+index f804ee5..e98b8b1 100644
+--- a/README.md
++++ b/README.md
+@@ -1,11 +1,11 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+-# lab04
++# lab05
+ ТиМП Дрозд И.Я. ИУ8-25
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ 
+ =======
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ >>>>>>> 5cae1b3 (added CI)
+ # lab03
+ >>>>>>> 9c1ba44 (Create README.md)
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? git commit -m"added tests"
+No other hunks to goto
+@@ -1,11 +1,11 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+-# lab04
++# lab05
+ ТиМП Дрозд И.Я. ИУ8-25
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ 
+ =======
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ >>>>>>> 5cae1b3 (added CI)
+ # lab03
+ >>>>>>> 9c1ba44 (Create README.md)
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? ls
+y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+@@ -1,11 +1,11 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+-# lab04
++# lab05
+ ТиМП Дрозд И.Я. ИУ8-25
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ 
+ =======
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ >>>>>>> 5cae1b3 (added CI)
+ # lab03
+ >>>>>>> 9c1ba44 (Create README.md)
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? git add -p
+No other hunks to goto
+@@ -1,11 +1,11 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+-# lab04
++# lab05
+ ТиМП Дрозд И.Я. ИУ8-25
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ 
+ =======
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ >>>>>>> 5cae1b3 (added CI)
+ # lab03
+ >>>>>>> 9c1ba44 (Create README.md)
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? 
+@@ -1,11 +1,11 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+-# lab04
++# lab05
+ ТиМП Дрозд И.Я. ИУ8-25
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ 
+ =======
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ >>>>>>> 5cae1b3 (added CI)
+ # lab03
+ >>>>>>> 9c1ba44 (Create README.md)
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? e
+error: patch failed: README.md:1
+error: README.md: patch does not apply
+error: 'git apply --cached' failed
+Your edited hunk does not apply. Edit again (saying "no" discards!) [y/n]? n
+Your edited hunk does not apply. Edit again (saying "no" discards!) [y/n]? n
+@@ -1,11 +1,11 @@
+ <<<<<<< HEAD
+ <<<<<<< HEAD
+-# lab04
++# lab05
+ ТиМП Дрозд И.Я. ИУ8-25
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ 
+ =======
+-[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab04.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab04)
++[![Build Status](https://app.travis-ci.com/Dr0-ozdik777/lab05.svg?token=u5G6Xzo8jeSfKqFpe7qH)](https://app.travis-ci.com/Dr0-ozdik777/lab05)
+ >>>>>>> 5cae1b3 (added CI)
+ # lab03
+ >>>>>>> 9c1ba44 (Create README.md)
+(1/1) Stage this hunk [y,n,q,a,d,s,e,?]? y
+
+diff --git a/third-party/gtest b/third-party/gtest
+index 2fe3bd9..58d77fa 160000
+--- a/third-party/gtest
++++ b/third-party/gtest
+@@ -1 +1 @@
+-Subproject commit 2fe3bd994b3189899d93f1d5a881e725e046fdc2
++Subproject commit 58d77fa8070e8cec2dc1ed015d66b454c8d78850
+(1/1) Stage this hunk [y,n,q,a,d,e,?]? y
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab05'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab05'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': 
+Password for 'https://github.com': 
+remote: No anonymous write access.
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab05/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab05/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': ^[[A^[[A^[[  
+Password for 'https://%1B%5BA%1B%5BA%1B%5B@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab05/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab05/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab05/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab05/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote set-url origin git@github.com:Dr0-ozdik777/lab05.git
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ssh-keygen -t ed25519 -C i.drozd0509@gmail.com
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_ed25519): q
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in q
+Your public key has been saved in q.pub
+The key fingerprint is:
+SHA256:2kxeOyOyEa5lZwM0KW9/FunhMp7sacVo8NDCR+qvZz8 i.drozd0509@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|                 |
+|       ..        |
+|    ..++         |
+|     +*.o  .     |
+|     .=*So=      |
+|     o.X++o+     |
+|      Bo%.O      |
+|     + O=XEo     |
+|    . o**...     |
++----[SHA256]-----+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ssh-keygen -N "" -f ~/.ssh/id_rsa
+Generating public/private ed25519 key pair.
+Your identification has been saved in /home/ubuntu/.ssh/id_rsa
+Your public key has been saved in /home/ubuntu/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:lcrZQKDz4uVKah0/gIBljrzoSm5elPYzs5RLrlgcnDM ubuntu@Ubuntu-GUI
+The key's randomart image is:
++--[ED25519 256]--+
+|      ...        |
+|  o  . .   .     |
+|o=  o   . o      |
+|+.o oo . *       |
+|...E. o S .      |
+|..=.B+.          |
+|.. =o%.          |
+|oo=o=.O          |
+|==..o+ .         |
++----[SHA256]-----+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat ~/.ssh/id_rsa.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHv2DQ7Ytrh4R9F11OyQOewyIlgK7NiHoZl3aMyQp4Gi ubuntu@Ubuntu-GUI
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+To github.com:Dr0-ozdik777/lab05.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 893 bytes | 446.00 KiB/s, done.
+From github.com:Dr0-ozdik777/lab05
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main --no-rebase
+From github.com:Dr0-ozdik777/lab05
+ * branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main --rebase
+error: cannot pull with rebase: Your index contains uncommitted changes.
+error: Please commit or stash them.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gitadd.
+gitadd.: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+	add
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add .
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main
+From github.com:Dr0-ozdik777/lab05
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main --rebase
+error: cannot pull with rebase: Your index contains uncommitted changes.
+error: Please commit or stash them.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git commit -m
+error: switch `m' requires a value
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git commit -m "ok"
+[main 9eb5a54] ok
+ 136 files changed, 8643 insertions(+), 5 deletions(-)
+ create mode 100644 CMakeLists.txt
+ create mode 100644 _build/CMakeCache.txt
+ create mode 100644 _build/CMakeFiles/4.0.2/CMakeCCompiler.cmake
+ create mode 100644 _build/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake
+ create mode 100755 _build/CMakeFiles/4.0.2/CMakeDetermineCompilerABI_C.bin
+ create mode 100755 _build/CMakeFiles/4.0.2/CMakeDetermineCompilerABI_CXX.bin
+ create mode 100644 _build/CMakeFiles/4.0.2/CMakeSystem.cmake
+ create mode 100644 _build/CMakeFiles/4.0.2/CompilerIdC/CMakeCCompilerId.c
+ create mode 100755 _build/CMakeFiles/4.0.2/CompilerIdC/a.out
+ create mode 100644 _build/CMakeFiles/4.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
+ create mode 100755 _build/CMakeFiles/4.0.2/CompilerIdCXX/a.out
+ create mode 100644 _build/CMakeFiles/CMakeConfigureLog.yaml
+ create mode 100644 _build/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 _build/CMakeFiles/InstallScripts.json
+ create mode 100644 _build/CMakeFiles/Makefile.cmake
+ create mode 100644 _build/CMakeFiles/Makefile2
+ create mode 100644 _build/CMakeFiles/TargetDirectories.txt
+ create mode 100644 _build/CMakeFiles/check.dir/DependInfo.cmake
+ create mode 100644 _build/CMakeFiles/check.dir/build.make
+ create mode 100644 _build/CMakeFiles/check.dir/cmake_clean.cmake
+ create mode 100644 _build/CMakeFiles/check.dir/compiler_depend.make
+ create mode 100644 _build/CMakeFiles/check.dir/compiler_depend.ts
+ create mode 100644 _build/CMakeFiles/check.dir/depend.make
+ create mode 100644 _build/CMakeFiles/check.dir/flags.make
+ create mode 100644 _build/CMakeFiles/check.dir/link.d
+ create mode 100644 _build/CMakeFiles/check.dir/link.txt
+ create mode 100644 _build/CMakeFiles/check.dir/progress.make
+ create mode 100644 _build/CMakeFiles/check.dir/tests/test1.cpp.o
+ create mode 100644 _build/CMakeFiles/check.dir/tests/test1.cpp.o.d
+ create mode 100644 _build/CMakeFiles/cmake.check_cache
+ create mode 100644 _build/CMakeFiles/print_lib.dir/DependInfo.cmake
+ create mode 100644 _build/CMakeFiles/print_lib.dir/build.make
+ create mode 100644 _build/CMakeFiles/print_lib.dir/cmake_clean.cmake
+ create mode 100644 _build/CMakeFiles/print_lib.dir/cmake_clean_target.cmake
+ create mode 100644 _build/CMakeFiles/print_lib.dir/compiler_depend.make
+ create mode 100644 _build/CMakeFiles/print_lib.dir/compiler_depend.ts
+ create mode 100644 _build/CMakeFiles/print_lib.dir/depend.make
+ create mode 100644 _build/CMakeFiles/print_lib.dir/flags.make
+ create mode 100644 _build/CMakeFiles/print_lib.dir/link.txt
+ create mode 100644 _build/CMakeFiles/print_lib.dir/print.cpp.o
+ create mode 100644 _build/CMakeFiles/print_lib.dir/print.cpp.o.d
+ create mode 100644 _build/CMakeFiles/print_lib.dir/progress.make
+ create mode 100644 _build/CMakeFiles/progress.marks
+ create mode 100644 _build/CTestTestfile.cmake
+ create mode 100644 _build/Makefile
+ create mode 100644 _build/Testing/Temporary/CTestCostData.txt
+ create mode 100644 _build/Testing/Temporary/LastTest.log
+ create mode 100755 _build/check
+ create mode 100644 _build/cmake_install.cmake
+ create mode 100644 _build/file.txt
+ create mode 100644 _build/lib/libgmock.a
+ create mode 100644 _build/lib/libgmock_main.a
+ create mode 100644 _build/lib/libgtest.a
+ create mode 100644 _build/lib/libgtest_main.a
+ create mode 100644 _build/libprint_lib.a
+ create mode 100644 _build/third-party/gtest/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 _build/third-party/gtest/CMakeFiles/progress.marks
+ create mode 100644 _build/third-party/gtest/CTestTestfile.cmake
+ create mode 100644 _build/third-party/gtest/Makefile
+ create mode 100644 _build/third-party/gtest/cmake_install.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/build.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/compiler_depend.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/depend.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/flags.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/link.txt
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/progress.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/build.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/depend.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/flags.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/link.txt
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/progress.make
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+ create mode 100644 _build/third-party/gtest/googlemock/CMakeFiles/progress.marks
+ create mode 100644 _build/third-party/gtest/googlemock/CTestTestfile.cmake
+ create mode 100644 _build/third-party/gtest/googlemock/Makefile
+ create mode 100644 _build/third-party/gtest/googlemock/cmake_install.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/DependInfo.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/build.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/compiler_depend.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/compiler_depend.ts
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/depend.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/flags.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/link.txt
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/progress.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/build.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/depend.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/flags.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/link.txt
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/progress.make
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+ create mode 100644 _build/third-party/gtest/googletest/CMakeFiles/progress.marks
+ create mode 100644 _build/third-party/gtest/googletest/CTestTestfile.cmake
+ create mode 100644 _build/third-party/gtest/googletest/Makefile
+ create mode 100644 _build/third-party/gtest/googletest/cmake_install.cmake
+ create mode 100644 _build/third-party/gtest/googletest/generated/GTestConfig.cmake
+ create mode 100644 _build/third-party/gtest/googletest/generated/GTestConfigVersion.cmake
+ create mode 100644 _build/third-party/gtest/googletest/generated/gmock.pc
+ create mode 100644 _build/third-party/gtest/googletest/generated/gmock_main.pc
+ create mode 100644 _build/third-party/gtest/googletest/generated/gtest.pc
+ create mode 100644 _build/third-party/gtest/googletest/generated/gtest_main.pc
+ create mode 100644 file.txt
+ create mode 100644 print.cpp
+ create mode 100644 print.hpp
+ create mode 100644 q
+ create mode 100644 q.pub
+ create mode 100644 tests/print.hpp
+ create mode 100644 tests/test1.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+To github.com:Dr0-ozdik777/lab05.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main
+From github.com:Dr0-ozdik777/lab05
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main --force
+Enumerating objects: 185, done.
+Counting objects: 100% (185/185), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (185/185), 945.53 KiB | 7.27 MiB/s, done.
+Total 185 (delta 61), reused 15 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:5
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:210
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:219
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dr0-ozdik777/lab05/security/secret-scanning/unblock-secret/2xKo96ppq20QPPTZzuLyoLldJ7A
+remote:     
+remote: 
+remote: 
+To github.com:Dr0-ozdik777/lab05.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push --force
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push --set-upstream origin main
+To github.com:Dr0-ozdik777/lab05.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git fetch origin
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git rebase origin/main
+warning: unable to rmdir 'third-party/gtest': Directory not empty
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+error: could not apply e9f1ae1... Create README.md
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply e9f1ae1... Create README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git rebase origin/main
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+	git rebase (--continue | --abort | --skip)
+If that is not the case, please
+	rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git rebase --continue
+[detached HEAD 69bb694] Create README.md
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply a0ed754... Update README.md
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply a0ed754... Update README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main --force-with-lease
+Enumerating objects: 185, done.
+Counting objects: 100% (185/185), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (185/185), 945.53 KiB | 7.50 MiB/s, done.
+Total 185 (delta 61), reused 15 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:5
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:210
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:219
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dr0-ozdik777/lab05/security/secret-scanning/unblock-secret/2xKo96ppq20QPPTZzuLyoLldJ7A
+remote:     
+remote: 
+remote: 
+To github.com:Dr0-ozdik777/lab05.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano LB_04_1.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main --force-with-lease
+Enumerating objects: 185, done.
+Counting objects: 100% (185/185), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (185/185), 945.53 KiB | 7.95 MiB/s, done.
+Total 185 (delta 61), reused 15 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:5
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:210
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:219
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dr0-ozdik777/lab05/security/secret-scanning/unblock-secret/2xKo96ppq20QPPTZzuLyoLldJ7A
+remote:     
+remote: 
+remote: 
+To github.com:Dr0-ozdik777/lab05.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add LB_04_1.txt
+fatal: pathspec 'LB_04_1.txt' did not match any files
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main --force
+Enumerating objects: 185, done.
+Counting objects: 100% (185/185), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (185/185), 945.53 KiB | 6.22 MiB/s, done.
+Total 185 (delta 61), reused 15 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:5
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:210
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:219
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dr0-ozdik777/lab05/security/secret-scanning/unblock-secret/2xKo96ppq20QPPTZzuLyoLldJ7A
+remote:     
+remote: 
+remote: 
+To github.com:Dr0-ozdik777/lab05.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main --force
+Enumerating objects: 185, done.
+Counting objects: 100% (185/185), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (185/185), 1.30 MiB | 8.65 MiB/s, done.
+Total 185 (delta 60), reused 15 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (60/60), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:5
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:210
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:219
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dr0-ozdik777/lab05/security/secret-scanning/unblock-secret/2xKo96ppq20QPPTZzuLyoLldJ7A
+remote:     
+remote: 
+remote: 
+To github.com:Dr0-ozdik777/lab05.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git filter-repo --force --invert-paths --path LB_04_1.txt
+git: 'filter-repo' is not a git command. See 'git --help'.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano LB_04_1.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git filter-repo --force --invert-paths --path LB_04_1.txt
+git: 'filter-repo' is not a git command. See 'git --help'.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab04
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ git filter-repo --force --invert-paths --path LB_04_1.txt
+git: 'filter-repo' is not a git command. See 'git --help'.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ nano LB_04_1.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab04$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote remove origin
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote add origin git@github.com:Dr0-ozdik777/lab05.git
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main --force
+Enumerating objects: 185, done.
+Counting objects: 100% (185/185), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (162/162), done.
+Writing objects: 100% (185/185), 945.53 KiB | 8.44 MiB/s, done.
+Total 185 (delta 61), reused 15 (delta 3), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: 
+remote: - GITHUB PUSH PROTECTION
+remote:   —————————————————————————————————————————
+remote:     Resolve the following violations before pushing again
+remote: 
+remote:     - Push cannot contain secrets
+remote: 
+remote:     
+remote:      (?) Learn how to resolve a blocked push
+remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+remote:     
+remote:     
+remote:       —— GitHub Personal Access Token ——————————————————————
+remote:        locations:
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:5
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:210
+remote:          - commit: 3c74707e5446cacc70fc7b4208aa7ebfe39cc745
+remote:            path: LB_04_1.txt:219
+remote:     
+remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+remote:        https://github.com/Dr0-ozdik777/lab05/security/secret-scanning/unblock-secret/2xKo96ppq20QPPTZzuLyoLldJ7A
+remote:     
+remote: 
+remote: 
+To github.com:Dr0-ozdik777/lab05.git
+ ! [remote rejected] main -> main (push declined due to repository rule violations)
+error: failed to push some refs to 'github.com:Dr0-ozdik777/lab05.git'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ mv lab05 lab05_old
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ git clone git@github.com:Dr0-ozdik777/lab05.git 
+Cloning into 'lab05'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd .
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd lab05_old
+-bash: cd: lab05_old: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd .
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05_old
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old$ ls
+_build  README.md  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old$ cd third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party$ ls
+gtest
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party$ cd gtest
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest$ ls
+BUILD.bazel  CMakeLists.txt   CONTRIBUTORS  googlemock  LICENSE    WORKSPACE
+ci           CONTRIBUTING.md  docs          googletest  README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest$ cd docs
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest/docs$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest$ cd ci
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest/ci$ ls
+linux-presubmit.sh  macos-presubmit.sh
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest/ci$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest$ cd..
+cd..: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party/gtest$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/third-party$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old$ cd _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build$ ls
+bin  CMakeFiles
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build$ cd bin
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/bin$ ls
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/bin$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build$ cd CMakeFiles
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/CMakeFiles$ ls
+4.0.2  CMakeScratch  pkgRedirects
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/CMakeFiles$ cd CMakeScratch
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/CMakeFiles/CMakeScratch$ ls
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/CMakeFiles/CMakeScratch$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build/CMakeFiles$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build$ cd 4.0.2
+-bash: cd: 4.0.2: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build$ cd pkgRedirects
+-bash: cd: pkgRedirects: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old/_build$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git log --all --full-history -- "**/LB_04_1.txt"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ git log --all --full-history -- "**/LB_04_1.txt"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05_old
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old$ git log --all --full-history -- "**/LB_04_1.txt"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05_old$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ mv lab05 lab05_backup
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ git clone git@github.com:Dr0-ozdik777/lab05.git
+Cloning into 'lab05'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cp -r ../lab05_backup/{src,include,CMakeLists.txt,README.md,_build} .
+cp: cannot stat '../lab05_backup/src': No such file or directory
+cp: cannot stat '../lab05_backup/include': No such file or directory
+cp: cannot stat '../lab05_backup/CMakeLists.txt': No such file or directory
+cp: cannot stat '../lab05_backup/_build': No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls -la ../lab05_backup/
+total 16
+drwxrwxr-x 3 ubuntu ubuntu 4096 May 20 02:20 .
+drwxrwxr-x 8 ubuntu ubuntu 4096 May 20 02:26 ..
+drwxrwxr-x 8 ubuntu ubuntu 4096 May 20 02:20 .git
+-rw-rw-r-- 1 ubuntu ubuntu   37 May 20 02:20 README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat ../lab05_backup/README.md
+# lab05
+ТиМП Дрозд ИУ8-25
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mkdir -p _build && cd _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/_build$ cmake .. && make
+CMake Warning:
+  Ignoring extra path from command line:
+
+   ".."
+
+
+CMake Error: The source directory "/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05" does not appear to contain CMakeLists.txt.
+Specify --help for usage, or press the help button on the CMake GUI.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/_build$ sudo find / -type d -name "_build" 2>/dev/null
+/home/ubuntu/boost_1_69_0/libs/gil/doc/_build
+/home/ubuntu/boost_1_69_0/libs/python/doc/numpy/_build
+/home/ubuntu/Dr0-ozdik777/workspace/_build
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05_old/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/_build$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ echo "_build/" >> .gitignore
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add .gitignore
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git commit -m _build
+[main 3ed14ee] _build
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/_build$ ls
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/_build$ ls
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/_build$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ alias gsed=sed
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd Dr0-ozdik777/workspace
+-bash: cd: Dr0-ozdik777/workspace: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ source scripts/activate
+-bash: scripts/activate: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ ls
+lab02  lab03  lab04  lab05  lab05_backup  lab05_old
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects$ cd lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git clone --mirror https://github.com/${GITHUB_USERNAME}/lab04 /tmp/lab04_temp
+Cloning into bare repository '/tmp/lab04_temp'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 23 (delta 6), reused 9 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (23/23), 18.46 KiB | 378.00 KiB/s, done.
+Resolving deltas: 100% (6/6), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git -C /tmp/lab04_temp filter-repo \
+  --replace-text <(echo "ghp_[A-Za-z0-9]{36}==>[REDACTED]") \
+  --replace-text <(echo "AKIA[0-9A-Z]{16}==>[REDACTED]") \
+  --replace-text <(echo "sk_[a-zA-Z0-9]{48}==>[REDACTED]")
+git: 'filter-repo' is not a git command. See 'git --help'.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote add origin /tmp/lab04_temp
+error: remote origin already exists.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ sed -i 's/ghp_[A-Za-z0-9]\{36\}/[REDACTED]/g' $(git grep -l "ghp_")
+sed: no input files
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ды
+ды: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote add origin /tmp/lab04_temp
+error: remote origin already exists.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git pull origin main
+From github.com:Dr0-ozdik777/lab05
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote set-url origin https://github.com/Dr0-ozdik777/lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git clone https://github.com/${GITHUB_USERNAME}/lab04 projects/lab05
+Cloning into 'projects/lab05'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 23 (delta 6), reused 9 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (23/23), 18.46 KiB | 315.00 KiB/s, done.
+Resolving deltas: 100% (6/6), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  projects  README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd projects
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/projects$ ls
+lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/projects$ cd lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/projects/lab05$ ls
+LB_03.txt  LB_04_1.txt  README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/projects/lab05$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/projects$ cd..
+cd..: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05/projects$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote remove origin
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git remote add origin https://github.com/Dr0-ozdik777/lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mkdir third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git submodule add https://github.com/google/googletest third-party/gtest
+Cloning into '/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/third-party/gtest'...
+remote: Enumerating objects: 28073, done.
+remote: Counting objects: 100% (291/291), done.
+remote: Compressing objects: 100% (189/189), done.
+remote: Total 28073 (delta 188), reused 104 (delta 100), pack-reused 27782 (from 4
+Receiving objects: 100% (28073/28073), 13.56 MiB | 18.51 MiB/s, done.
+Resolving deltas: 100% (20796/20796), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd third-party/gtest && git checkout release-1.8.1 && cd ../..
+Note: switching to 'release-1.8.1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 2fe3bd99 Merge pull request #1433 from dsacre/fix-clang-warnings
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add third-party/gtest
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git commit -m"added gtest framework"
+[main b7da697] added gtest framework
+ 2 files changed, 4 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 160000 third-party/gtest
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i '/option(BUILD_EXAMPLES "Build examples" OFF)/a\
+option(BUILD_TESTS "Build tests" OFF)
+' CMakeLists.txt
+sed: can't read CMakeLists.txt: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  projects  README.md  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ touch CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i '/option(BUILD_EXAMPLES "Build examples" OFF)/a\
+option(BUILD_TESTS "Build tests" OFF)
+' CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat >> CMakeLists.txt <<EOF
+
+if(BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(third-party/gtest)
+  file(GLOB \${PROJECT_NAME}_TEST_SOURCES tests/*.cpp)
+  add_executable(check \${\${PROJECT_NAME}_TEST_SOURCES})
+  target_link_libraries(check \${PROJECT_NAME} gtest_main)
+  add_test(NAME check COMMAND check)
+endif()
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mkdir tests
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > tests/test1.cpp <<EOF
+#include <print.hpp>
+
+#include <gtest/gtest.h>
+
+TEST(Print, InFileStream)
+{
+  std::string filepath = "file.txt";
+  std::string text = "hello";
+  std::ofstream out{filepath};
+
+  print(text, out);
+  out.close();
+
+  std::string result;
+  std::ifstream in{filepath};
+  in >> result;
+
+  EXPECT_EQ(result, text);
+}
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at third-party/gtest/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 has been removed from CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+  Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.
+
+
+-- Configuring incomplete, errors occurred!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build  CMakeLists.txt  projects  README.md  tests  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+CMake Error at third-party/gtest/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 has been removed from CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+  Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.
+
+
+-- Configuring incomplete, errors occurred!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at third-party/gtest/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 has been removed from CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+  Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.
+
+
+-- Configuring incomplete, errors occurred!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano third-party/gtest/CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at _build/_deps/googletest-src/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at _build/_deps/googletest-src/googlemock/CMakeLists.txt:39 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at _build/_deps/googletest-src/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found Python: /usr/bin/python3.12 (found version "3.12.3") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (3.3s)
+CMake Error at CMakeLists.txt:10 (add_library):
+  Cannot find source file:
+
+    print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:10 (add_library):
+  No SOURCES given to target: print_lib
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > print.hpp <<EOF
+#pragma once
+#include <string>
+#include <ostream>
+
+void print(const std::string& text, std::ostream& out = std::cout);
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > print.cpp <<EOF
+#include "print.hpp"
+#include <iostream>
+
+void print(const std::string& text, std::ostream& out) {
+    out << text;
+}
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ды
+ды: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build          print.cpp  projects   tests
+CMakeLists.txt  print.hpp  README.md  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build 
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at _build/_deps/googletest-src/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at _build/_deps/googletest-src/googlemock/CMakeLists.txt:39 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at _build/_deps/googletest-src/googletest/CMakeLists.txt:49 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Found Python: /usr/bin/python3.12 (found version "3.12.3") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (2.4s)
+CMake Error at CMakeLists.txt:26 (target_link_libraries):
+  Target "check" links to:
+
+    GTest::GTest
+
+  but the target was not found.  Possible reasons include:
+
+    * There is a typo in the target name.
+    * A find_package call is missing for an IMPORTED target.
+    * An ALIAS target is missing.
+
+
+
+-- Generating done (0.0s)
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > CMakeLists.txt <<'EOF'
+cmake_minimum_required(VERSION 3.10)
+project(lab05)
+
+option(BUILD_TESTS "Build tests" ON)
+
+# Настройки компилятора
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Создаем библиотеку
+add_library(print_lib print.cpp)
+target_include_directories(print_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+if(BUILD_TESTS)
+    enable_testing()
+    
+    # Подключаем Google Test
+    find_package(GTest REQUIRED)
+    
+    # Добавляем тесты
+    file(GLOB TEST_SOURCES tests/*.cpp)
+    add_executable(check ${TEST_SOURCES})
+    
+    # Линковка
+    target_link_libraries(check 
+        print_lib 
+        GTest::GTest
+        GTest::Main
+        pthread
+    )
+    
+    add_test(NAME check COMMAND check)
+endif()
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at /snap/cmake/1464/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake:227 (message):
+  Could NOT find GTest (missing: GTEST_LIBRARY GTEST_INCLUDE_DIR
+  GTEST_MAIN_LIBRARY)
+Call Stack (most recent call first):
+  /snap/cmake/1464/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake:591 (_FPHSA_FAILURE_MESSAGE)
+  /snap/cmake/1464/share/cmake-4.0/Modules/FindGTest.cmake:273 (find_package_handle_standard_args)
+  CMakeLists.txt:18 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ [200~sudo apt-get install libgtest-dev~
+[200~sudo: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ sudo apt-get install libgtest-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  googletest
+The following NEW packages will be installed:
+  googletest libgtest-dev
+0 upgraded, 2 newly installed, 0 to remove and 91 not upgraded.
+Need to get 787 kB of archives.
+After this operation, 5175 kB of additional disk space will be used.
+Do you want to continue? [Y/n] н
+Abort.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ sudo apt-get install libgtest-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  googletest
+The following NEW packages will be installed:
+  googletest libgtest-dev
+0 upgraded, 2 newly installed, 0 to remove and 91 not upgraded.
+Need to get 787 kB of archives.
+After this operation, 5175 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 googletest all 1.14.0-1 [521 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 libgtest-dev arm64 1.14.0-1 [266 kB]
+Fetched 787 kB in 1s (1339 kB/s)     
+Selecting previously unselected package googletest.
+(Reading database ... 214361 files and directories currently installed.)
+Preparing to unpack .../googletest_1.14.0-1_all.deb ...
+Unpacking googletest (1.14.0-1) ...
+Selecting previously unselected package libgtest-dev:arm64.
+Preparing to unpack .../libgtest-dev_1.14.0-1_arm64.deb ...
+Unpacking libgtest-dev:arm64 (1.14.0-1) ...
+Setting up googletest (1.14.0-1) ...
+Setting up libgtest-dev:arm64 (1.14.0-1) ...
+Scanning processes...                                                              
+Scanning linux images...                                                           
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cd /usr/src/gtest
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ sudo cmake CMakeLists.txt
+-- The CXX compiler identification is GNU 13.3.0
+-- The C compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Python3: /usr/bin/python3.12 (found version "3.12.3") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /usr/src/googletest/googletest
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ sudo make
+[ 25%] Building CXX object CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 50%] Linking CXX static library lib/libgtest.a
+[ 50%] Built target gtest
+[ 75%] Building CXX object CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[100%] Linking CXX static library lib/libgtest_main.a
+[100%] Built target gtest_main
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ sudo cp *.a /usr/lib
+cp: cannot stat '*.a': No such file or directory
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ sudo apt-get install build-essential cmake libgtest-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+build-essential is already the newest version (12.10ubuntu1).
+libgtest-dev is already the newest version (1.14.0-1).
+The following additional packages will be installed:
+  cmake-data libjsoncpp25 librhash0
+Suggested packages:
+  cmake-doc cmake-format elpa-cmake-mode ninja-build
+The following NEW packages will be installed:
+  cmake cmake-data libjsoncpp25 librhash0
+0 upgraded, 4 newly installed, 0 to remove and 91 not upgraded.
+Need to get 12.7 MB of archives.
+After this operation, 45.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libjsoncpp25 arm64 1.9.5-6build1 [78.2 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 librhash0 arm64 1.4.3-3build1 [126 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 cmake-data all 3.28.3-1build7 [2155 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 cmake arm64 3.28.3-1build7 [10.3 MB]
+Fetched 12.7 MB in 2s (6960 kB/s)
+Selecting previously unselected package libjsoncpp25:arm64.
+(Reading database ... 214631 files and directories currently installed.)
+Preparing to unpack .../libjsoncpp25_1.9.5-6build1_arm64.deb ...
+Unpacking libjsoncpp25:arm64 (1.9.5-6build1) ...
+Selecting previously unselected package librhash0:arm64.
+Preparing to unpack .../librhash0_1.4.3-3build1_arm64.deb ...
+Unpacking librhash0:arm64 (1.4.3-3build1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../cmake-data_3.28.3-1build7_all.deb ...
+Unpacking cmake-data (3.28.3-1build7) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../cmake_3.28.3-1build7_arm64.deb ...
+Unpacking cmake (3.28.3-1build7) ...
+Setting up libjsoncpp25:arm64 (1.9.5-6build1) ...
+Setting up librhash0:arm64 (1.4.3-3build1) ...
+Setting up cmake-data (3.28.3-1build7) ...
+Setting up cmake (3.28.3-1build7) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Scanning processes...                                                              
+Scanning linux images...                                                           
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ cd /usr/src/gtest
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ sudo mkdir build
+ubuntu@Ubuntu-GUI:/usr/src/gtest$ cd build
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ sudo cmake ..
+-- The CXX compiler identification is GNU 13.3.0
+-- The C compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /usr/src/googletest/googletest
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ sudo make
+make: *** No targets specified and no makefile found.  Stop.
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ sudo cp lib/*.a /usr/lib
+cp: cannot stat 'lib/*.a': No such file or directory
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ ls /usr/lib/libgtest*
+ls: cannot access '/usr/lib/libgtest*': No such file or directory
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ sudo apt-get update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Reading package lists... Done
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ sudo apt-get install build-essential cmake libgtest-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+build-essential is already the newest version (12.10ubuntu1).
+cmake is already the newest version (3.28.3-1build7).
+libgtest-dev is already the newest version (1.14.0-1).
+0 upgraded, 0 newly installed, 0 to remove and 91 not upgraded.
+ubuntu@Ubuntu-GUI:/usr/src/gtest/build$ cd /usr/src/googletest
+ubuntu@Ubuntu-GUI:/usr/src/googletest$ sudo mkdir build
+ubuntu@Ubuntu-GUI:/usr/src/googletest$ cd build
+ubuntu@Ubuntu-GUI:/usr/src/googletest/build$ sudo cmake ..
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /usr/src/googletest/build
+ubuntu@Ubuntu-GUI:/usr/src/googletest/build$ sudo make
+[ 12%] Building CXX object googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 25%] Linking CXX static library ../lib/libgtest.a
+[ 25%] Built target gtest
+[ 37%] Building CXX object googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 50%] Linking CXX static library ../lib/libgmock.a
+[ 50%] Built target gmock
+[ 62%] Building CXX object googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[ 75%] Linking CXX static library ../lib/libgmock_main.a
+[ 75%] Built target gmock_main
+[ 87%] Building CXX object googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[100%] Linking CXX static library ../lib/libgtest_main.a
+[100%] Built target gtest_main
+ubuntu@Ubuntu-GUI:/usr/src/googletest/build$ sudo make install
+[ 25%] Built target gtest
+[ 50%] Built target gmock
+[ 75%] Built target gmock_main
+[100%] Built target gtest_main
+Install the project...
+-- Install configuration: ""
+-- Up-to-date: /usr/local/include
+-- Installing: /usr/local/include/gmock
+-- Installing: /usr/local/include/gmock/internal
+-- Installing: /usr/local/include/gmock/internal/gmock-internal-utils.h
+-- Installing: /usr/local/include/gmock/internal/gmock-pp.h
+-- Installing: /usr/local/include/gmock/internal/custom
+-- Installing: /usr/local/include/gmock/internal/custom/README.md
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-generated-actions.h
+-- Installing: /usr/local/include/gmock/internal/custom/gmock-port.h
+-- Installing: /usr/local/include/gmock/internal/gmock-port.h
+-- Installing: /usr/local/include/gmock/gmock-matchers.h
+-- Installing: /usr/local/include/gmock/gmock-more-actions.h
+-- Installing: /usr/local/include/gmock/gmock.h
+-- Installing: /usr/local/include/gmock/gmock-spec-builders.h
+-- Installing: /usr/local/include/gmock/gmock-nice-strict.h
+-- Installing: /usr/local/include/gmock/gmock-actions.h
+-- Installing: /usr/local/include/gmock/gmock-cardinalities.h
+-- Installing: /usr/local/include/gmock/gmock-function-mocker.h
+-- Installing: /usr/local/include/gmock/gmock-more-matchers.h
+-- Installing: /usr/local/lib/libgmock.a
+-- Installing: /usr/local/lib/libgmock_main.a
+-- Installing: /usr/local/lib/pkgconfig/gmock.pc
+-- Installing: /usr/local/lib/pkgconfig/gmock_main.pc
+-- Installing: /usr/local/lib/cmake/GTest/GMockTargets.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GMockTargets-noconfig.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestTargets.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestTargets-noconfig.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestConfigVersion.cmake
+-- Installing: /usr/local/lib/cmake/GTest/GTestConfig.cmake
+-- Up-to-date: /usr/local/include
+-- Installing: /usr/local/include/gtest
+-- Installing: /usr/local/include/gtest/gtest-matchers.h
+-- Installing: /usr/local/include/gtest/gtest.h
+-- Installing: /usr/local/include/gtest/gtest-typed-test.h
+-- Installing: /usr/local/include/gtest/gtest-param-test.h
+-- Installing: /usr/local/include/gtest/gtest_pred_impl.h
+-- Installing: /usr/local/include/gtest/gtest-spi.h
+-- Installing: /usr/local/include/gtest/gtest-assertion-result.h
+-- Installing: /usr/local/include/gtest/gtest-test-part.h
+-- Installing: /usr/local/include/gtest/gtest-death-test.h
+-- Installing: /usr/local/include/gtest/internal
+-- Installing: /usr/local/include/gtest/internal/gtest-death-test-internal.h
+-- Installing: /usr/local/include/gtest/internal/custom
+-- Installing: /usr/local/include/gtest/internal/custom/gtest.h
+-- Installing: /usr/local/include/gtest/internal/custom/README.md
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/custom/gtest-printers.h
+-- Installing: /usr/local/include/gtest/internal/gtest-param-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-type-util.h
+-- Installing: /usr/local/include/gtest/internal/gtest-internal.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port-arch.h
+-- Installing: /usr/local/include/gtest/internal/gtest-string.h
+-- Installing: /usr/local/include/gtest/internal/gtest-port.h
+-- Installing: /usr/local/include/gtest/internal/gtest-filepath.h
+-- Installing: /usr/local/include/gtest/gtest-message.h
+-- Installing: /usr/local/include/gtest/gtest_prod.h
+-- Installing: /usr/local/include/gtest/gtest-printers.h
+-- Installing: /usr/local/lib/libgtest.a
+-- Installing: /usr/local/lib/libgtest_main.a
+-- Installing: /usr/local/lib/pkgconfig/gtest.pc
+-- Installing: /usr/local/lib/pkgconfig/gtest_main.pc
+ubuntu@Ubuntu-GUI:/usr/src/googletest/build$ ls /usr/local/lib/libgtest*
+/usr/local/lib/libgtest.a  /usr/local/lib/libgtest_main.a
+ubuntu@Ubuntu-GUI:/usr/src/googletest/build$ cd ..
+ubuntu@Ubuntu-GUI:/usr/src/googletest$ cd ..
+ubuntu@Ubuntu-GUI:/usr/src$ cd ..
+ubuntu@Ubuntu-GUI:/usr$ cd ..
+ubuntu@Ubuntu-GUI:/$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:/$ alias gsed=sed
+ubuntu@Ubuntu-GUI:/$ cd Dr0-ozdik777/workspace
+-bash: cd: Dr0-ozdik777/workspace: No such file or directory
+ubuntu@Ubuntu-GUI:/$ cd ..
+ubuntu@Ubuntu-GUI:/$ cd ~/Dr0-ozdik777/workspace/projects/lab05
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > CMakeLists.txt <<'EOF'
+cmake_minimum_required(VERSION 3.10)
+project(lab05)
+
+option(BUILD_TESTS "Build tests" ON)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Основная библиотека
+add_library(print_lib print.cpp)
+target_include_directories(print_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+if(BUILD_TESTS)
+    enable_testing()
+    
+    # Используем установленную версию GTest
+    find_package(GTest REQUIRED)
+    include_directories(${GTEST_INCLUDE_DIRS})
+    
+    # Тестовый исполняемый файл
+    add_executable(check tests/test_print.cpp)
+    
+    # Линковка
+    target_link_libraries(check
+        print_lib
+        ${GTEST_LIBRARIES}
+        ${GTEST_MAIN_LIBRARIES}
+        pthread
+    )
+    
+    add_test(NAME check COMMAND check)
+endif()
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.14.0")
+-- Configuring done (0.3s)
+CMake Error at CMakeLists.txt:21 (add_executable):
+  Cannot find source file:
+
+    tests/test_print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:21 (add_executable):
+  No SOURCES given to target: check
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls tests/test_print.cpp
+ls: cannot access 'tests/test_print.cpp': No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ды
+ды: command not found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build          print.cpp  projects   tests
+CMakeLists.txt  print.hpp  README.md  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- Configuring done (0.0s)
+CMake Error at CMakeLists.txt:21 (add_executable):
+  Cannot find source file:
+
+    tests/print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:21 (add_executable):
+  No SOURCES given to target: check
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mv print.cpp tests/print.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.14.0")
+-- Configuring done (0.3s)
+CMake Error at CMakeLists.txt:10 (add_library):
+  Cannot find source file:
+
+    print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:10 (add_library):
+  No SOURCES given to target: print_lib
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mv tests/print.cpp ./print.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.14.0")
+-- Configuring done (0.2s)
+CMake Error at CMakeLists.txt:21 (add_executable):
+  Cannot find source file:
+
+    tests/print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:21 (add_executable):
+  No SOURCES given to target: check
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > CMakeLists.txt <<'EOF'
+cmake_minimum_required(VERSION 3.10)
+project(lab05)
+
+option(BUILD_TESTS "Build tests" ON)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Проверка существования основного файла
+if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/print.cpp")
+    message(FATAL_ERROR "Main source file print.cpp not found!")
+endif()
+
+# Основная библиотека
+add_library(print_lib print.cpp)
+target_include_directories(print_lib PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+if(BUILD_TESTS)
+    enable_testing()
+    
+    # Проверка существования тестового файла
+    if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_print.cpp")
+        message(WARNING "Test file tests/test_print.cpp not found! Creating empty one.")
+        file(WRITE "${CMAKE_CURRENT_SOURCE_DIR}/tests/test_print.cpp" 
+            "#include <gtest/gtest.h>\n#include \"print.hpp\"\n\n// Your tests here\n")
+    endif()
+    
+    find_package(GTest REQUIRED)
+    include_directories(${GTEST_INCLUDE_DIRS})
+    
+    add_executable(check tests/test_print.cpp)
+    
+    target_link_libraries(check
+        print_lib
+        GTest::GTest
+        GTest::Main
+        pthread
+    )
+    
+    add_test(NAME check COMMAND check)
+endif()
+> EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mkdir -p tests
+cat > tests/test_print.cpp <<'EOF'
+#include <gtest/gtest.h>
+#include "print.hpp"
+
+// Пример теста
+TEST(PrintTest, BasicTest) {
+    EXPECT_EQ(1, 1);
+}
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mv tests/print.cpp .
+mv: cannot stat 'tests/print.cpp': No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ ls
+_build          print.cpp  projects   tests
+CMakeLists.txt  print.hpp  README.md  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ rm -rf _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake -H. -B_build -DBUILD_TESTS=ON
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found GTest: /usr/local/lib/cmake/GTest/GTestConfig.cmake (found version "1.14.0")
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build
+[ 25%] Building CXX object CMakeFiles/print_lib.dir/print.cpp.o
+In file included from /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/print.cpp:1:
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/print.hpp:5:62: error: ‘cout’ is not a member of ‘std’
+    5 | void print(const std::string& text, std::ostream& out = std::cout);
+      |                                                              ^~~~
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/print.hpp:4:1: note: ‘std::cout’ is defined in header ‘<iostream>’; did you forget to ‘#include <iostream>’?
+    3 | #include <ostream>
+  +++ |+#include <iostream>
+    4 | 
+gmake[2]: *** [CMakeFiles/print_lib.dir/build.make:79: CMakeFiles/print_lib.dir/print.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:90: CMakeFiles/print_lib.dir/all] Error 2
+gmake: *** [Makefile:101: all] Error 2
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ nano print.hpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build
+[ 25%] Building CXX object CMakeFiles/print_lib.dir/print.cpp.o
+[ 50%] Linking CXX static library libprint_lib.a
+[ 50%] Built target print_lib
+[ 75%] Building CXX object CMakeFiles/check.dir/tests/test_print.cpp.o
+[100%] Linking CXX executable check
+[100%] Built target check
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build --target test
+Running tests...
+Test project /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+    Start 1: check
+1/1 Test #1: check ............................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.01 sec
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ _build/check
+Running main() from /usr/src/googletest/googletest/src/gtest_main.cc
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PrintTest
+[ RUN      ] PrintTest.BasicTest
+[       OK ] PrintTest.BasicTest (0 ms)
+[----------] 1 test from PrintTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cmake --build _build --target test -- ARGS=--verbose
+Running tests...
+UpdateCTestConfiguration  from :/home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build/DartConfiguration.tcl
+Test project /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: check
+
+1: Test command: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build/check
+1: Working Directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab05/_build
+1: Test timeout computed to be: 9999879
+1: Running main() from /usr/src/googletest/googletest/src/gtest_main.cc
+1: [==========] Running 1 test from 1 test suite.
+1: [----------] Global test environment set-up.
+1: [----------] 1 test from PrintTest
+1: [ RUN      ] PrintTest.BasicTest
+1: [       OK ] PrintTest.BasicTest (0 ms)
+1: [----------] 1 test from PrintTest (0 ms total)
+1: 
+1: [----------] Global test environment tear-down
+1: [==========] 1 test from 1 test suite ran. (0 ms total)
+1: [  PASSED  ] 1 test.
+1/1 Test #1: check ............................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.00 sec
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i 's/lab04/lab05/g' README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i 's/\(DCMAKE_INSTALL_PREFIX=_install\)/\1 -DBUILD_TESTS=ON/' .travis.yml
+sed: can't read .travis.yml: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ mkdir -p .github/workflows
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > .github/workflows/ci.yml << 'EOF'
+> language: cpp
+
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - g++-9
+      - lcov
+      - libgtest-dev
+      - python3-pip
+
+before_install:
+  - pip3 install --user cpp-coveralls
+
+script:
+  - mkdir -p build
+  - cd build
+  - cmake .. -DBUILD_TESTS=ON -DCODE_COVERAGE=ON
+  - cmake --build .
+  - ctest --output-on-failure
+
+after_success:
+  - lcov --directory . --capture --output-file coverage.info
+  - lcov --remove coverage.info '/usr/*' '*/tests/*' --output-file coverage.info
+  - coveralls --lcov-file coverage.info --exclude-pattern ".*mock.*"
+> EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > .github/workflows/ci.yml << 'EOF'
+> language: cpp
+
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - g++-9
+      - lcov
+      - libgtest-dev
+      - python3-pip
+
+before_install:
+  - pip3 install --user cpp-coveralls
+
+script:
+  - mkdir -p build
+  - cd build
+  - cmake .. -DBUILD_TESTS=ON -DCODE_COVERAGE=ON
+  - cmake --build .
+  - ctest --output-on-failure
+
+after_success:
+  - lcov --directory . --capture --output-file coverage.info
+  - lcov --remove coverage.info '/usr/*' '*/tests/*' --output-file coverage.info
+  - coveralls --lcov-file coverage.info --exclude-pattern ".*mock.*"
+> service_name: travis-ci
+> repo_token: s2b9qLRQEjWB61Q15cKdxI9HsxxcPdDCXtWX
+> EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > CMakeLists.txt <<'EOF'
+> cmake_minimum_required(VERSION 3.10)
+project(banking)
+
+# Настройки компилятора
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+option(BUILD_TESTS "Build tests" OFF)
+option(CODE_COVERAGE "Enable coverage reporting" OFF)
+
+# Основная библиотека
+add_library(banking
+    src/Account.cpp
+    src/Transaction.cpp
+)
+
+target_include_directories(banking PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+
+# Тесты
+if(BUILD_TESTS)
+    enable_testing()
+    
+    # Настройки покрытия
+    if(CODE_COVERAGE)
+        add_compile_options(-fprofile-arcs -ftest-coverage)
+        add_link_options(--coverage)
+    endif()
+
+    # Google Test
+    find_package(GTest REQUIRED)
+    
+    # Mock-объекты (GoogleMock)
+    find_package(GMock REQUIRED)
+    
+    # Тест для Account
+    add_executable(test_Account
+        tests/test_Account.cpp
+    )
+    target_link_libraries(test_Account
+        banking
+        GTest::GTest
+        GMock::GMock
+    )
+    add_test(NAME test_Account COMMAND test_Account)
+    
+    # Тест для Transaction
+    add_executable(test_Transaction
+        tests/test_Transaction.cpp
+    )
+    target_link_libraries(test_Transaction
+        banking
+        GTest::GTest
+        GMock::GMock
+    )
+    add_test(NAME test_Transaction COMMAND test_Transaction)
+endif()
+> EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i 's/\(DCMAKE_INSTALL_PREFIX=_install\)/\1 -DBUILD_TESTS=ON/' .travis.yml
+sed: can't read .travis.yml: No such file or directory
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > .travis.yml << 'EOF'
+language: cpp
+
+compiler: gcc
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - g++-9
+      - lcov
+      - libgtest-dev
+      - python3-pip
+
+before_install:
+  - pip3 install --user cpp-coveralls
+
+script:
+  - mkdir -p build
+  - cd build
+  - cmake .. -DCMAKE_INSTALL_PREFIX=_install -DBUILD_TESTS=ON -DCODE_COVERAGE=ON
+  - cmake --build .
+  - ctest --output-on-failure
+
+after_success:
+  - lcov --directory . --capture --output-file coverage.info
+  - lcov --remove coverage.info '/usr/*' '*/tests/*' --output-file coverage.info
+  - coveralls --lcov-file coverage.info
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ cat > .coveralls.yml << EOF
+service_name: travis-ci
+repo_token: s2b9qLRQEjWB61Q15cKdxI9HsxxcPdDCXtWX
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add .travis.yml .coveralls.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git commit -m "Add CI/CD configuration"
+[main 4d7364b] Add CI/CD configuration
+ 2 files changed, 31 insertions(+)
+ create mode 100644 .coveralls.yml
+ create mode 100644 .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i 's/\(DCMAKE_INSTALL_PREFIX=_install\)/\1 -DBUILD_TESTS=ON/' .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ gsed -i '/cmake --build _build --target install/a\
+> - cmake --build _build --target test -- ARGS=--verbose
+' .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ travis lint
+Hooray, .travis.yml looks valid :)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add .travis.yml
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add tests
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git add -p
+No changes.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git commit -m"added tests"
+[main 02283d1] added tests
+ 3 files changed, 27 insertions(+), 1 deletion(-)
+ create mode 100644 tests/test1.cpp
+ create mode 100644 tests/test_print.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab05'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ git push origin main
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (17/17), 2.02 KiB | 2.02 MiB/s, done.
+Total 17 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/Dr0-ozdik777/lab05
+   211476c..02283d1  main -> main
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab05$ 
