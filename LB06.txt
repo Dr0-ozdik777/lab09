@@ -1,0 +1,437 @@
+ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-59-generic aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~$ export GITHUB_EMAIL=i.drozd0509@gmail.com
+ubuntu@Ubuntu-GUI:~$ alias edit=nano
+ubuntu@Ubuntu-GUI:~$ alias gsed=sed
+ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
+~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab05 projects/lab06
+Cloning into 'projects/lab06'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (16/16), done.
+remote: Total 23 (delta 4), reused 16 (delta 3), pack-reused 0 (from 0)
+Receiving objects: 100% (23/23), 21.81 KiB | 446.00 KiB/s, done.
+Resolving deltas: 100% (4/4), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd projects/lab06
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git remote remove origin
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git remote add origin https://github.com/Dr0-ozdik777/lab06
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ ls
+LB_05.txt  README.md  tests  third-party
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat > CMakeLists.txt <<EOF
+> cmake_minimum_required(VERSION 3.10)
+project(print VERSION 0.1.0)
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION_TWEAK 0)
+set(PRINT_VERSION "${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}.${PRINT_VERSION_TWEAK}")
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
+add_library(print STATIC print.cpp)
+> target_include_directories(print PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+option(BUILD_TESTS "Build tests" OFF)
+> if(BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(third-party/gtest)
+  file(GLOB TEST_SOURCES tests/*.cpp)
+  add_executable(check ${TEST_SOURCES})
+  target_link_libraries(check print gtest_main)
+  add_test(NAME check COMMAND check)
+endif()
+include(InstallRequiredSystemLibraries)
+set(CPACK_PACKAGE_NAME "print")
+set(CPACK_PACKAGE_VENDOR "Dr0-ozdik777")
+set(CPACK_PACKAGE_CONTACT "you@example.com")
+set(CPACK_PACKAGE_VERSION ${PRINT_VERSION})
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Static print library")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+include(CPack)
+> EOF
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ gsed -i '/project(print)/a\
+> set(PRINT_VERSION\
+  \${PRINT_VERSION_MAJOR}.\${PRINT_VERSION_MINOR}.\${PRINT_VERSION_PATCH}.\${PRINT_VERSION_TWEAK})
+> ' CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ gsed -i '/project(print)/a\
+set(PRINT_VERSION_TWEAK 0)
+' CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ gsed -i '/project(print)/a\
+set(PRINT_VERSION_PATCH 0)
+' CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ gsed -i '/project(print)/a\
+set(PRINT_VERSION_MINOR 1)
+' CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ gsed -i '/project(print)/a\
+set(PRINT_VERSION_MAJOR 0)
+> ' CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git diff
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ touch DESCRIPTION && edit DESCRIPTION
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ touch ChangeLog.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ export DATE="`LANG=en_US date +'%a %b %d %Y'`"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat > ChangeLog.md <<EOF
+* ${DATE} ${GITHUB_USERNAME} <${GITHUB_EMAIL}> 0.1.0.0
+- Initial RPM release
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat > CPackConfig.cmake <<EOF
+include(InstallRequiredSystemLibraries)
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat >> CPackConfig.cmake <<EOF
+set(CPACK_PACKAGE_CONTACT ${GITHUB_EMAIL})
+set(CPACK_PACKAGE_VERSION_MAJOR \${PRINT_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR \${PRINT_VERSION_MINOR})
+set(CPACK_PACKAGE_VERSION_PATCH \${PRINT_VERSION_PATCH})
+set(CPACK_PACKAGE_VERSION_TWEAK \${PRINT_VERSION_TWEAK})
+set(CPACK_PACKAGE_VERSION \${PRINT_VERSION})
+set(CPACK_PACKAGE_DESCRIPTION_FILE \${CMAKE_CURRENT_SOURCE_DIR}/DESCRIPTION)
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "static C++ library for printing")
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat >> CPackConfig.cmake <<EOF
+
+set(CPACK_RESOURCE_FILE_LICENSE \${CMAKE_CURRENT_SOURCE_DIR}/LICENSE)
+set(CPACK_RESOURCE_FILE_README \${CMAKE_CURRENT_SOURCE_DIR}/README.md)
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat >> CPackConfig.cmake <<EOF
+
+set(CPACK_RPM_PACKAGE_NAME "print-devel")
+set(CPACK_RPM_PACKAGE_LICENSE "MIT")
+set(CPACK_RPM_PACKAGE_GROUP "print")
+set(CPACK_RPM_CHANGELOG_FILE \${CMAKE_CURRENT_SOURCE_DIR}/ChangeLog.md)
+set(CPACK_RPM_PACKAGE_RELEASE 1)
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat >> CPackConfig.cmake <<EOF
+
+set(CPACK_DEBIAN_PACKAGE_NAME "libprint-dev")
+set(CPACK_DEBIAN_PACKAGE_PREDEPENDS "cmake >= 3.0")
+set(CPACK_DEBIAN_PACKAGE_RELEASE 1)
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat >> CPackConfig.cmake <<EOF
+
+include(CPack)
+EOF
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat >> CMakeLists.txt <<EOF
+
+include(CPackConfig.cmake)
+EOF
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ gsed -i 's/lab05/lab06/g' README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git add .
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git commit -m"added cpack config"
+[main abb688c] added cpack config
+ 5 files changed, 56 insertions(+), 1 deletion(-)
+ create mode 100644 CMakeLists.txt
+ create mode 100644 CPackConfig.cmake
+ create mode 100644 ChangeLog.md
+ create mode 100644 DESCRIPTION
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git tag v0.1.0.0
+
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab06'
+
+fatal: Authentication failed for 'https://github.com/Dr0-ozdik777/lab06/'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git push origin main --tags
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (30/30), 23.13 KiB | 23.13 MiB/s, done.
+Total 30 (delta 5), reused 22 (delta 4), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/Dr0-ozdik777/lab06
+ * [new tag]         v0.1.0.0 -> v0.1.0.0
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab06'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git pull origin main --rebase
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 855 bytes | 855.00 KiB/s, done.
+From https://github.com/Dr0-ozdik777/lab06
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Auto-merging README.md
+CONFLICT (add/add): Merge conflict in README.md
+error: could not apply 211476c... Create README.md
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 211476c... Create README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ nano README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git rebase --continue
+[detached HEAD 7156f10] Create README.md
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply abb688c... added cpack config
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply abb688c... added cpack config
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git push origin main --tags
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://%D0%92Dr0-ozdik777@github.com': 
+To https://github.com/Dr0-ozdik777/lab06
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab06'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ nano README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git add README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git rebase --continue
+[detached HEAD 38fa4f0] added cpack config
+ 5 files changed, 56 insertions(+), 2 deletions(-)
+ create mode 100644 CMakeLists.txt
+ create mode 100644 CPackConfig.cmake
+ create mode 100644 ChangeLog.md
+ create mode 100644 DESCRIPTION
+Successfully rebased and updated refs/heads/main.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ git push origin main --tags
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (30/30), 21.97 KiB | 10.99 MiB/s, done.
+Total 30 (delta 5), reused 10 (delta 1), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/Dr0-ozdik777/lab06
+   8ef63e8..38fa4f0  main -> main
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ travis login --auto
+no suitable github token found
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ travis login --pro --github-token *****
+Successfully logged in as Dr0-ozdik777!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ travis encrypt GITHUB_TOKEN=*****
+Detected repository as Dr0-ozdik777/lab06, is this correct? |yes| y
+/home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/command.rb:334:in `format': wrong number of arguments (given 5, expected 1..3) (ArgumentError)
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/command.rb:315:in `store_error'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/command.rb:235:in `rescue in execute'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/command.rb:200:in `execute'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli.rb:66:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/bin/travis:21:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/travis:25:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/travis:25:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/ruby_executable_hooks:22:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/ruby_executable_hooks:22:in `<main>'
+/home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/question.rb:445:in `strip': invalid byte sequence in UTF-8 (ArgumentError)
+
+        answer_string.send(whitespace)
+                           ^^^^^^^^^^
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/question.rb:445:in `remove_whitespace'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/question.rb:464:in `format_answer'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/terminal.rb:92:in `get_line'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline.rb:532:in `get_line'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline.rb:516:in `get_response_line_mode'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/question.rb:524:in `get_response'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/question.rb:536:in `get_response_or_default'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline/question_asker.rb:30:in `ask_once'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline.rb:223:in `ask'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/highline-2.1.0/lib/highline.rb:194:in `agree'
+	from /home/ubuntu/.rvm/rubies/ruby-3.2.0/lib/ruby/3.2.0/forwardable.rb:240:in `agree'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/repo_command.rb:87:in `detect_slug'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/repo_command.rb:70:in `find_slug'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/repo_command.rb:27:in `setup'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli/command.rb:207:in `execute'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/lib/travis/cli.rb:66:in `run'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/gems/travis-1.14.0/bin/travis:21:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/travis:25:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/travis:25:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/ruby_executable_hooks:22:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-3.2.0/bin/ruby_executable_hooks:22:in `<main>'
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ travis enable
+Detected repository as Dr0-ozdik777/lab06, is this correct? |yes| y
+Dr0-ozdik777/lab06: enabled :)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cmake -H. -B_build
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at /usr/share/cmake-3.28/Modules/CPack.cmake:685 (message):
+  CPack license resource file: "/LICENSE" could not be found.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.28/Modules/CPack.cmake:690 (cpack_check_file_exists)
+  CMakeLists.txt:27 (include)
+
+
+CMake Warning at /usr/share/cmake-3.28/Modules/CPack.cmake:507 (message):
+  CPack.cmake has already been included!!
+Call Stack (most recent call first):
+  CPackConfig.cmake:24 (include)
+  CMakeLists.txt:29 (include)
+
+
+CMake Error at /usr/share/cmake-3.28/Modules/CPack.cmake:685 (message):
+  CPack license resource file:
+  "/home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/LICENSE" could not be
+  found.
+Call Stack (most recent call first):
+  /usr/share/cmake-3.28/Modules/CPack.cmake:690 (cpack_check_file_exists)
+  CPackConfig.cmake:24 (include)
+  CMakeLists.txt:29 (include)
+
+
+-- Configuring incomplete, errors occurred!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ touch LICENSE
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.10)
+project(print VERSION 0.1.0)
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION_TWEAK 0)
+set(PRINT_VERSION "...")
+set(PRINT_VERSION_STRING "v")
+add_library(print STATIC print.cpp)
+target_include_directories(print PUBLIC )
+option(BUILD_TESTS "Build tests" OFF)
+if(BUILD_TESTS)
+  enable_testing()
+  add_subdirectory(third-party/gtest)
+  file(GLOB TEST_SOURCES tests/*.cpp)
+  add_executable(check )
+  target_link_libraries(check print gtest_main)
+  add_test(NAME check COMMAND check)
+endif()
+include(InstallRequiredSystemLibraries)
+set(CPACK_PACKAGE_NAME "print")
+set(CPACK_PACKAGE_VENDOR "Dr0-ozdik777")
+set(CPACK_PACKAGE_CONTACT "you@example.com")
+set(CPACK_PACKAGE_VERSION )
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Static print library")
+set(CPACK_RESOURCE_FILE_LICENSE "/LICENSE")
+include(CPack)
+
+include(CPackConfig.cmake)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ touch LICENSE
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ nano LICENSE
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ touch LICENSE
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cmake -H. -B_build
+CMake Warning at /usr/share/cmake-3.28/Modules/CPack.cmake:507 (message):
+  CPack.cmake has already been included!!
+Call Stack (most recent call first):
+  CPackConfig.cmake:24 (include)
+  CMakeLists.txt:29 (include)
+
+
+-- Configuring done (0.0s)
+CMake Error at CMakeLists.txt:9 (add_library):
+  Cannot find source file:
+
+    print.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+
+CMake Error at CMakeLists.txt:9 (add_library):
+  No SOURCES given to target: print
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ ls
+_build        CMakeLists.txt     DESCRIPTION  LICENSE    tests
+ChangeLog.md  CPackConfig.cmake  LB_05.txt    README.md  third-party
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ nano print.cpp
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cmake -H. -B_build
+CMake Warning at /usr/share/cmake-3.28/Modules/CPack.cmake:507 (message):
+  CPack.cmake has already been included!!
+Call Stack (most recent call first):
+  CPackConfig.cmake:24 (include)
+  CMakeLists.txt:29 (include)
+
+
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cmake --build _build
+[ 50%] Building CXX object CMakeFiles/print.dir/print.cpp.o
+[100%] Linking CXX static library libprint.a
+[100%] Built target print
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cd _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06/_build$ cpack -G "TGZ"
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Install directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06
+CPack: Create package
+CPack: - package: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build/print-0.1.0-Source.tar.gz generated.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06/_build$ cd ..
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ"
+CMake Warning at /usr/share/cmake-3.28/Modules/CPack.cmake:507 (message):
+  CPack.cmake has already been included!!
+Call Stack (most recent call first):
+  CPackConfig.cmake:24 (include)
+  CMakeLists.txt:29 (include)
+
+
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ cmake --build _build --target package
+[100%] Built target print
+Run CPack packaging tool...
+CPack: Create package using TBZ2
+CPack: Install projects
+CPack: - Install directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06
+CPack: Create package
+CPack: - package: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build/print-0.1.0-Source.tar.bz2 generated.
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Install directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06
+CPack: Create package
+CPack: - package: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build/print-0.1.0-Source.tar.gz generated.
+CPack: Create package using TXZ
+CPack: Install projects
+CPack: - Install directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06
+CPack: Create package
+CPack: - package: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build/print-0.1.0-Source.tar.xz generated.
+CPack: Create package using TZ
+CPack: Install projects
+CPack: - Install directory: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06
+CPack: Create package
+CPack: - package: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab06/_build/print-0.1.0-Source.tar.Z generated.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ mkdir artifacts
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ mv _build/*.tar.gz artifacts
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab06$ tree artifacts
+artifacts
+└── print-0.1.0-Source.tar.gz
+
+1 directory, 1 file
