@@ -1,5 +1,5 @@
 #include <print.hpp>
-
+#include <fstream>
 #include <gtest/gtest.h>
 
 TEST(Print, InFileStream)

@@ -1,0 +1,70 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07]> "cmake" "--version"
+cmake version 3.28.3
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `-H.`
+  `-B/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/_builds/clang-cxx14`
+  `-GUnix Makefiles`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/tools/polly/clang-cxx14.cmake`
+]
+[/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07]> "cmake" "-H." "-B/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/_builds/clang-cxx14" "-GUnix Makefiles" "-DCMAKE_TOOLCHAIN_FILE=/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/tools/polly/clang-cxx14.cmake"
+-- [polly] Used toolchain: clang / c++14 support
+-- The CXX compiler identification is Clang 18.1.3
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The C compiler identification is Clang 18.1.3
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/clang - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Python: /usr/bin/python3 (found version "3.12.3") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (6.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/_builds/clang-cxx14
+Execute command: [
+  `cmake`
+  `--build`
+  `/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/_builds/clang-cxx14`
+  `--`
+]
+[/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07]> "cmake" "--build" "/home/ubuntu/Dr0-ozdik777/workspace/projects/lab07/_builds/clang-cxx14" "--"
+[  7%] Building CXX object CMakeFiles/print.dir/print.cpp.o
+[ 14%] Linking CXX static library libprint.a
+[ 14%] Built target print
+[ 21%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 28%] Linking CXX static library ../../../lib/libgtest.a
+[ 28%] Built target gtest
+[ 35%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 42%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 42%] Built target gtest_main
+[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o
+[ 57%] Linking CXX executable check
+[ 57%] Built target check
+[ 64%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+[ 71%] Linking CXX executable demo
+[ 71%] Built target demo
+[ 78%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 85%] Linking CXX static library ../../../lib/libgmock.a
+[ 85%] Built target gmock
+[ 92%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[100%] Linking CXX static library ../../../lib/libgmock_main.a
+[100%] Built target gmock_main
