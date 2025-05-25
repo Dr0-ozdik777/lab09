@@ -1,0 +1,2211 @@
+ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ubuntu@Ubuntu-GUI:~$ export GITHUB_TOKEN=*****
+ubuntu@Ubuntu-GUI:~$ export GITHUB_USERNAME=Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~$ export PACKAGE_MANAGER="apt"
+ubuntu@Ubuntu-GUI:~$ export GPG_PACKAGE_NAME=gpg2
+ubuntu@Ubuntu-GUI:~$ PACKAGE_MANAGER install xclip
+PACKAGE_MANAGER: command not found
+
+ubuntu@Ubuntu-GUI:~$ sudo $PACKAGE_MANAGER install xclip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  xclip
+0 upgraded, 1 newly installed, 0 to remove and 83 not upgraded.
+Need to get 17.0 kB of archives.
+After this operation, 94.2 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 xclip arm64 0.13-3 [17.0 kB]
+Fetched 17.0 kB in 0s (81.8 kB/s)
+Selecting previously unselected package xclip.
+(Reading database ... 222345 files and directories currently installed.)
+Preparing to unpack .../xclip_0.13-3_arm64.deb ...
+Unpacking xclip (0.13-3) ...
+Setting up xclip (0.13-3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...                                                                                 
+Scanning candidates...                                                                                
+Scanning linux images...                                                                              
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ ubuntu @ user manager service: systemd[1200]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+
+ubuntu@Ubuntu-GUI:~$ alias gsed=sed
+ubuntu@Ubuntu-GUI:~$ alias pbcopy='xclip -selection clipboard'
+ubuntu@Ubuntu-GUI:~$ alias pbpaste='xclip -selection clipboard -o'
+ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777$ cd workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
+~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ go get github.com/aktau/github-release
+Command 'go' not found, but can be installed with:
+sudo snap install go         # version 1.24.2, or
+sudo apt  install golang-go  # version 2:1.21~2
+sudo apt  install gccgo-go   # version 2:1.21~2
+See 'snap info go' for additional versions.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ sudo apt update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 https://download.docker.com/linux/ubuntu noble InRelease
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease [126 kB]
+Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+Hit:5 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Fetched 126 kB in 0s (259 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+83 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ sudo apt install golang-go -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  golang-1.22-go golang-1.22-src golang-src libpkgconf3 pkg-config pkgconf pkgconf-bin
+Suggested packages:
+  bzr | brz mercurial subversion
+The following NEW packages will be installed:
+  golang-1.22-go golang-1.22-src golang-go golang-src libpkgconf3 pkg-config pkgconf pkgconf-bin
+0 upgraded, 8 newly installed, 0 to remove and 83 not upgraded.
+Need to get 43.5 MB of archives.
+After this operation, 225 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 golang-1.22-src all 1.22.2-2ubuntu0.3 [19.7 MB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 golang-1.22-go arm64 1.22.2-2ubuntu0.3 [23.6 MB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 golang-src all 2:1.22~2build1 [5078 B]
+Get:4 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 golang-go arm64 2:1.22~2build1 [43.9 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 libpkgconf3 arm64 1.8.1-2build1 [31.2 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 pkgconf-bin arm64 1.8.1-2build1 [20.5 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 pkgconf arm64 1.8.1-2build1 [16.8 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 pkg-config arm64 1.8.1-2build1 [7264 B]
+Fetched 43.5 MB in 2s (21.7 MB/s)    
+Selecting previously unselected package golang-1.22-src.
+(Reading database ... 222357 files and directories currently installed.)
+Preparing to unpack .../0-golang-1.22-src_1.22.2-2ubuntu0.3_all.deb ...
+Unpacking golang-1.22-src (1.22.2-2ubuntu0.3) ...
+Selecting previously unselected package golang-1.22-go.
+Preparing to unpack .../1-golang-1.22-go_1.22.2-2ubuntu0.3_arm64.deb ...
+Unpacking golang-1.22-go (1.22.2-2ubuntu0.3) ...
+Selecting previously unselected package golang-src.
+Preparing to unpack .../2-golang-src_2%3a1.22~2build1_all.deb ...
+Unpacking golang-src (2:1.22~2build1) ...
+Selecting previously unselected package golang-go:arm64.
+Preparing to unpack .../3-golang-go_2%3a1.22~2build1_arm64.deb ...
+Unpacking golang-go:arm64 (2:1.22~2build1) ...
+Selecting previously unselected package libpkgconf3:arm64.
+Preparing to unpack .../4-libpkgconf3_1.8.1-2build1_arm64.deb ...
+Unpacking libpkgconf3:arm64 (1.8.1-2build1) ...
+Selecting previously unselected package pkgconf-bin.
+Preparing to unpack .../5-pkgconf-bin_1.8.1-2build1_arm64.deb ...
+Unpacking pkgconf-bin (1.8.1-2build1) ...
+Selecting previously unselected package pkgconf:arm64.
+Preparing to unpack .../6-pkgconf_1.8.1-2build1_arm64.deb ...
+Unpacking pkgconf:arm64 (1.8.1-2build1) ...
+Selecting previously unselected package pkg-config:arm64.
+Preparing to unpack .../7-pkg-config_1.8.1-2build1_arm64.deb ...
+Unpacking pkg-config:arm64 (1.8.1-2build1) ...
+Setting up libpkgconf3:arm64 (1.8.1-2build1) ...
+Setting up golang-1.22-src (1.22.2-2ubuntu0.3) ...
+Setting up pkgconf-bin (1.8.1-2build1) ...
+Setting up golang-src (2:1.22~2build1) ...
+Setting up golang-1.22-go (1.22.2-2ubuntu0.3) ...
+Setting up pkgconf:arm64 (1.8.1-2build1) ...
+Setting up pkg-config:arm64 (1.8.1-2build1) ...
+Setting up golang-go:arm64 (2:1.22~2build1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.4) ...
+Scanning processes...                                                                                 
+Scanning candidates...                                                                                
+Scanning linux images...                                                                              
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ ubuntu @ user manager service: systemd[1200]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ go version
+go version go1.22.2 linux/arm64
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ go get github.com/aktau/github-release
+go: go.mod file not found in current directory or any parent directory.
+	'go get' is no longer supported outside a module.
+	To build and install a command, use 'go install' with a version,
+	like 'go install example.com/cmd@latest'
+	For more information, see https://golang.org/doc/go-get-install-deprecation
+	or run 'go help get' or 'go help install'.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ go install github.com/aktau/github-release@latest
+go: downloading github.com/aktau/github-release v0.10.1
+go: finding module for package github.com/voxelbrain/goptions
+go: finding module for package github.com/dustin/go-humanize
+go: finding module for package github.com/github-release/github-release/github
+go: downloading github.com/dustin/go-humanize v1.0.1
+go: downloading github.com/voxelbrain/goptions v0.0.0-20180630082107-58cddc247ea2
+go: downloading github.com/github-release/github-release v0.10.1
+go: found github.com/dustin/go-humanize in github.com/dustin/go-humanize v1.0.1
+go: found github.com/github-release/github-release/github in github.com/github-release/github-release v0.10.1
+go: found github.com/voxelbrain/goptions in github.com/voxelbrain/goptions v0.0.0-20180630082107-58cddc247ea2
+go: finding module for package github.com/tomnomnom/linkheader
+go: finding module for package github.com/kevinburke/rest/restclient
+go: downloading github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80
+go: downloading github.com/kevinburke/rest v0.0.0-20240617045629-3ed0ad3487f0
+go: found github.com/kevinburke/rest/restclient in github.com/kevinburke/rest v0.0.0-20240617045629-3ed0ad3487f0
+go: found github.com/tomnomnom/linkheader in github.com/tomnomnom/linkheader v0.0.0-20180905144013-02ca5825eb80
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ echo 'export PATH=$PATH:~/go/bin' >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ github-release --version
+github-release v0.10.1
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab08 projects/lab09
+Cloning into 'projects/lab09'...
+remote: Enumerating objects: 490, done.
+remote: Counting objects: 100% (490/490), done.
+remote: Compressing objects: 100% (206/206), done.
+remote: Total 490 (delta 247), reused 486 (delta 246), pack-reused 0 (from 0)
+Receiving objects: 100% (490/490), 2.72 MiB | 7.84 MiB/s, done.
+Resolving deltas: 100% (247/247), done.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd projects/lab09
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git remote remove origin
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git remote add origin https://github.com/Dr0-ozdik777/lab09
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git remote -v
+origin	https://github.com/Dr0-ozdik777/lab09 (fetch)
+origin	https://github.com/Dr0-ozdik777/lab09 (push)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sed -i 's/lab08/lab09/g' README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ $PACKAGE_MANAGER install ${GPG_PACKAGE_NAME}
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo $PACKAGE_MANAGER install ${GPG_PACKAGE_NAME}
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package gpg2
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo apt update
+Hit:1 http://ports.ubuntu.com/ubuntu-ports noble InRelease
+Hit:2 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports noble-updates InRelease
+Hit:4 http://ports.ubuntu.com/ubuntu-ports noble-backports InRelease
+Hit:5 http://ports.ubuntu.com/ubuntu-ports noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+83 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo apt install gnupg2
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  gnupg2
+0 upgraded, 1 newly installed, 0 to remove and 83 not upgraded.
+Need to get 4750 B of archives.
+After this operation, 32.8 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 gnupg2 all 2.4.4-2ubuntu17.2 [4750 B]
+Fetched 4750 B in 0s (41.5 kB/s) 
+Selecting previously unselected package gnupg2.
+(Reading database ... 236707 files and directories currently installed.)
+Preparing to unpack .../gnupg2_2.4.4-2ubuntu17.2_all.deb ...
+Unpacking gnupg2 (2.4.4-2ubuntu17.2) ...
+Setting up gnupg2 (2.4.4-2ubuntu17.2) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...                                                                                 
+Scanning candidates...                                                                                
+Scanning linux images...                                                                              
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ ubuntu @ user manager service: systemd[1200]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg2 --version
+gpg (GnuPG) 2.4.4
+libgcrypt 1.10.3
+Copyright (C) 2024 g10 Code GmbH
+License GNU GPL-3.0-or-later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /home/ubuntu/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ $PACKAGE_MANAGER install ${GPG_PACKAGE_NAME}
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ $PACKAGE_MANAGER install ${GPG2_PACKAGE_NAME}
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_MANAGER="apt"
+export GPG_PACKAGE_NAME="gnupg2"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_MANAGER="apt"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export GPG_PACKAGE_NAME="gnupg2"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo $PACKAGE_MANAGER install $GPG_PACKAGE_NAME
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+gnupg2 is already the newest version (2.4.4-2ubuntu17.2).
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 83 not upgraded.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ $PACKAGE_MANAGER install ${GPG_PACKAGE_NAME}
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo $PACKAGE_MANAGER install ${GPG_PACKAGE_NAME}
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+gnupg2 is already the newest version (2.4.4-2ubuntu17.2).
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 83 not upgraded.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --list-secret-keys --keyid-format LONG
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --full-generate-key
+gpg (GnuPG) 2.4.4; Copyright (C) 2024 g10 Code GmbH
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+   (9) ECC (sign and encrypt) *default*
+  (10) ECC (sign only)
+  (14) Existing key from card
+Your selection? 1
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 1y
+Key expires at Mon May 25 22:32:52 2026 MSK
+Is this correct? (y/N) y
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: Dr0-ozdik777
+Email address: i.drozd0509@gmail.com
+Comment: Lab09 Key
+You selected this USER-ID:
+    "Dr0-ozdik777 (Lab09 Key) <i.drozd0509@gmail.com>"
+
+Change (N)ame, (C)omment, (E)mail or (O)kay/(Q)uit? O
+
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: directory '/home/ubuntu/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/home/ubuntu/.gnupg/openpgp-revocs.d/A5F0F63139165E0049B30010480EFDFDD6E35953.rev'
+public and secret key created and signed.
+
+pub   rsa4096 2025-05-25 [SC] [expires: 2026-05-25]
+      A5F0F63139165E0049B30010480EFDFDD6E35953
+uid                      Dr0-ozdik777 (for lab09) <i.drozd0509@gmail.com>
+sub   rsa4096 2025-05-25 [E] [expires: 2026-05-25]
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --list-secret-keys --keyid-format LONG
+gpg: checking the trustdb
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+gpg: next trustdb check due at 2026-05-25
+/home/ubuntu/.gnupg/pubring.kbx
+-------------------------------
+sec   rsa4096/480EFDFDD6E35953 2025-05-25 [SC] [expires: 2026-05-25]
+      A5F0F63139165E0049B30010480EFDFDD6E35953
+uid                 [ultimate] Dr0-ozdik777 (for lab09) <i.drozd0509@gmail.com>
+ssb   rsa4096/263E0A556AB680E9 2025-05-25 [E] [expires: 2026-05-25]
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg -K ${GITHUB_USERNAME}
+sec   rsa4096 2025-05-25 [SC] [expires: 2026-05-25]
+      A5F0F63139165E0049B30010480EFDFDD6E35953
+uid           [ultimate] Dr0-ozdik777 (for lab09) <i.drozd0509@gmail.com>
+ssb   rsa4096 2025-05-25 [E] [expires: 2026-05-25]
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ GPG_KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep ssb | tail -1 | awk '{print $2}' | awk -F'/' '{print $2}')
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ GPG_SEC_KEY_ID=$(gpg --list-secret-keys --keyid-format LONG | grep sec | tail -1 | awk '{print $2}' | awk -F'/' '{print $2}')
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --armor --export ${GPG_KEY_ID} | pbcopy
+Error: Can't open display: (null)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --armor --export ${GPG_KEY_ID}
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+zoyky6C/aY9BjgJ810lEtN8HHnoSMlKwz9qR
+=Sihn
+-----END PGP PUBLIC KEY BLOCK-----
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --armor --export ${GPG_KEY_ID} | xclip -selection clipboard
+Error: Can't open display: (null)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ DISPLAY=:0 gpg --armor --export ${GPG_KEY_ID} | xclip -selection clipboard
+Error: Can't open display: (null)
+gpg: [stdout]: write error: Broken pipe
+gpg: filter_flush failed on close: Broken pipe
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo apt install wl-clipboard
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  bridge-utils ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+  wl-clipboard
+0 upgraded, 1 newly installed, 0 to remove and 83 not upgraded.
+Need to get 33.5 kB of archives.
+After this operation, 178 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 wl-clipboard arm64 2.2.1-1build1 [33.5 kB]
+Fetched 33.5 kB in 1s (61.5 kB/s)       
+Selecting previously unselected package wl-clipboard.
+(Reading database ... 236713 files and directories currently installed.)
+Preparing to unpack .../wl-clipboard_2.2.1-1build1_arm64.deb ...
+Unpacking wl-clipboard (2.2.1-1build1) ...
+Setting up wl-clipboard (2.2.1-1build1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...                                                                                 
+Scanning candidates...                                                                                
+Scanning linux images...                                                                              
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+User sessions running outdated binaries:
+ ubuntu @ user manager service: systemd[1200]
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --armor --export ${GPG_KEY_ID} | wl-copy
+Failed to connect to a Wayland server: No such file or directory
+Note: WAYLAND_DISPLAY is unset (falling back to wayland-0)
+Note: XDG_RUNTIME_DIR is set to /run/user/1000
+Please check whether /run/user/1000/wayland-0 socket exists and is accessible.
+gpg: [stdout]: write error: Broken pipe
+gpg: filter_flush failed on close: Broken pipe
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gpg --armor --export ${GPG_KEY_ID} > ~/gpg_public_key.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cat ~/gpg_public_key.txt
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+zoyky6C/aY9BjgJ810lEtN8HHnoSMlKwz9qR
+=Sihn
+-----END PGP PUBLIC KEY BLOCK-----
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git config --global user.signingkey ${GPG_SEC_KEY_ID}
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git config --global gpg.program gpg
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git config --global commit.gpgsign true
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git config --global -l | grep gpg
+gpg.program=gpg
+commit.gpgsign=true
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ echo "export GPG_KEY_ID=$GPG_KEY_ID" >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ echo "export GPG_SEC_KEY_ID=$GPG_SEC_KEY_ID" >> ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ source ~/.bashrc
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ test -r ~/.bash_profile && echo 'export GPG_TTY=$(tty)' >> ~/.bash_profile
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ echo 'export GPG_TTY=$(tty)' >> ~/.profile
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ"
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The C compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Python: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done (2.8s)
+-- Generating done (0.0s)
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CPACK_GENERATOR
+
+
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake --build _build --target package
+gmake: *** No rule to make target 'package'.  Stop.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ sudo cmake --build _build --target package
+gmake: *** No rule to make target 'package'.  Stop.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ ls
+]             cmake              demo         LB_05.txt  LB_08_1.txt  print.cpp  tests
+_build        CMakeLists.txt     DESCRIPTION  LB06.txt   _logs        print.hpp  tools
+ChangeLog.md  CPackConfig.cmake  Dockerfile   LB_07.txt  print1.cpp   README.md
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cat << 'EOF' > CMakeLists.txt
+cmake_minimum_required(VERSION 3.14)
+project(print VERSION 0.1.0 LANGUAGES CXX)
+
+# Version settings
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION "${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}")
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
+
+# Main library
+add_library(print STATIC print.cpp)
+target_include_directories(print PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+)
+
+# Tests
+option(BUILD_TESTS "Build tests" ON)
+
+if(BUILD_TESTS)
+    include(FetchContent)
+    FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG release-1.12.1
+    )
+    FetchContent_MakeAvailable(googletest)
+
+    enable_testing()
+    
+    add_executable(check tests/test1.cpp)
+    target_link_libraries(check PRIVATE print GTest::gtest_main)
+    
+    include(GoogleTest)
+    gtest_discover_tests(check)
+endif()
+
+add_executable(demo ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp)
+target_link_libraries(demo print)
+
+# Installation
+install(TARGETS print
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+    PUBLIC_HEADER DESTINATION include
+)
+
+install(TARGETS demo 
+    RUNTIME DESTINATION bin
+)
+
+# CPack configuration
+include(InstallRequiredSystemLibraries)
+include(CPack)
+
+set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
+set(CPACK_PACKAGE_VENDOR "Dr0-ozdik777")
+set(CPACK_PACKAGE_CONTACT "i.drozd0509@gmail.com")
+set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Static print library")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_SOURCE_GENERATOR "TGZ")
+EOF RENAME "LICENSE.txt"URRENT_SOURCE_DIR}/LICENSE"ECT_VERSION}")
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ ls
+]             cmake              demo         LB_05.txt  LB_08_1.txt  print.cpp  tests
+_build        CMakeLists.txt     DESCRIPTION  LB06.txt   _logs        print.hpp  tools
+ChangeLog.md  CPackConfig.cmake  Dockerfile   LB_07.txt  print1.cpp   README.md
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cat << 'EOF' > CMakeLists.txt
+cmake_minimum_required(VERSION 3.14)
+project(print VERSION 0.1.0 LANGUAGES CXX)
+
+# Version settings
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION "${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}")
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
+
+# Main library
+add_library(print STATIC print.cpp)
+target_include_directories(print PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+)
+
+# Tests
+option(BUILD_TESTS "Build tests" ON)
+
+if(BUILD_TESTS)
+    include(FetchContent)
+    FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG release-1.12.1
+    )
+    FetchContent_MakeAvailable(googletest)
+
+    enable_testing()
+    
+    add_executable(check tests/test1.cpp)
+    target_link_libraries(check PRIVATE print GTest::gtest_main)
+    
+    include(GoogleTest)
+    gtest_discover_tests(check)
+endif()
+
+add_executable(demo ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp)
+target_link_libraries(demo print)
+
+# Installation
+install(TARGETS print
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+    PUBLIC_HEADER DESTINATION include
+)
+
+install(TARGETS demo 
+    RUNTIME DESTINATION bin
+)
+
+# CPack configuration
+include(InstallRequiredSystemLibraries)
+include(CPack)
+
+set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
+set(CPACK_PACKAGE_VENDOR "Dr0-ozdik777")
+set(CPACK_PACKAGE_CONTACT "i.drozd0509@gmail.com")
+set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Static print library")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_SOURCE_GENERATOR "TGZ")
+EOF RENAME "LICENSE.txt"URRENT_SOURCE_DIR}/LICENSE"ECT_VERSION}")
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ nano CMakeLists.txt
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake -H. -B_build -DCPACK_GENERATOR="TGZ"
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/_build
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake --build _build --target package
+[  7%] Building CXX object CMakeFiles/print.dir/print.cpp.o
+[ 14%] Linking CXX static library libprint.a
+[ 14%] Built target print
+[ 21%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+[ 28%] Linking CXX static library ../../../lib/libgtest.a
+[ 28%] Built target gtest
+[ 35%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
+[ 42%] Linking CXX static library ../../../lib/libgtest_main.a
+[ 42%] Built target gtest_main
+[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o
+[ 57%] Linking CXX executable check
+[ 57%] Built target check
+[ 64%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+[ 71%] Linking CXX executable demo
+[ 71%] Built target demo
+[ 78%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
+[ 85%] Linking CXX static library ../../../lib/libgmock.a
+[ 85%] Built target gmock
+[ 92%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
+[100%] Linking CXX static library ../../../lib/libgmock_main.a
+[100%] Built target gmock_main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: print
+CPack: - Install project: print []
+CMake Error at /home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/_build/cmake_install.cmake:71 (file):
+  file INSTALL cannot find
+  "/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/LICENSE": No such file
+  or directory.
+
+CPack Error: Error when generating package: print
+gmake: *** [Makefile:71: package] Error 1
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake --build _build --target package
+CMake Error at CMakeLists.txt:72:
+  Parse error.  Expected a command name, got right paren with text ")".
+
+
+-- Configuring incomplete, errors occurred!
+gmake: *** [Makefile:399: cmake_check_build_system] Error 1
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ nano CMakeLists.txt
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cat << 'EOF' > CMakeLists.txt
+cmake_minimum_required(VERSION 3.14)
+project(print VERSION 0.1.0 LANGUAGES CXX)
+
+# Version settings
+set(PRINT_VERSION_MAJOR 0)
+set(PRINT_VERSION_MINOR 1)
+set(PRINT_VERSION_PATCH 0)
+set(PRINT_VERSION "${PRINT_VERSION_MAJOR}.${PRINT_VERSION_MINOR}.${PRINT_VERSION_PATCH}")
+set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
+
+# Main library
+add_library(print STATIC print.cpp)
+target_include_directories(print PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:include>
+)
+
+# Tests
+option(BUILD_TESTS "Build tests" ON)
+
+if(BUILD_TESTS)
+    include(FetchContent)
+    FetchContent_Declare(
+        googletest
+        GIT_REPOSITORY https://github.com/google/googletest.git
+        GIT_TAG release-1.12.1
+    )
+    FetchContent_MakeAvailable(googletest)
+
+    enable_testing()
+    
+    add_executable(check tests/test1.cpp)
+    target_link_libraries(check PRIVATE print GTest::gtest_main)
+    
+    include(GoogleTest)
+    gtest_discover_tests(check)
+endif()
+
+add_executable(demo ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp)
+target_link_libraries(demo print)
+
+# Installation
+install(TARGETS print
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+    PUBLIC_HEADER DESTINATION include
+)
+
+install(TARGETS demo 
+    RUNTIME DESTINATION bin
+)
+
+# CPack configuration
+include(InstallRequiredSystemLibraries)
+include(CPack)
+
+set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
+set(CPACK_PACKAGE_VENDOR "Dr0-ozdik777")
+set(CPACK_PACKAGE_CONTACT "i.drozd0509@gmail.com")
+set(CPACK_PACKAGE_VERSION "${PROJECT_VERSION}")
+EOFif()tall(FILES "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE" DESTINATION ".")")
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ mkdir -p _build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake -H. -B_build
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/_build
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake --build _build --target package
+[ 14%] Built target print
+[ 28%] Built target gtest
+[ 42%] Built target gtest_main
+[ 57%] Built target check
+[ 71%] Built target demo
+[ 85%] Built target gmock
+[100%] Built target gmock_main
+Run CPack packaging tool...
+CPack: Create package using TGZ
+CPack: Install projects
+CPack: - Run preinstall target for: print
+CPack: - Install project: print []
+CPack: Create package
+CPack: - package: /home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/_build/print-0.1.0-Linux.tar.gz generated.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis login --auto
+no suitable github token found
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis login --pro --auto
+no suitable github token found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis version
+1.14.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ gem update travis
+Updating installed gems
+Nothing to update
+Gems already up-to-date: travis
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git config --global github.token
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis env set GITHUB_TOKEN *****
+Detected repository as Dr0-ozdik777/lab09, is this correct? |yes| y
+[+] setting environment variable $GITHUB_TOKEN
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis login --pro --auto
+no suitable github token found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis login --pro --auto
+no suitable github token found
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis login --pro --github-token *****
+Successfully logged in as Dr0-ozdik777!
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ travis enable
+Dr0-ozdik777/lab09: enabled :)
+
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git tag -v v0.1.0
+object d172a7267eb713fd667f63a2ac8d072c451354d4
+type commit
+tag v0.1.0
+tagger Dr0-ozdik777 <i.drozd0509@gmail.com> 1748204249 +0300
+
+Version 0.1.0 initial release
+gpg: Signature made Sun May 25 23:17:29 2025 MSK
+gpg:                using RSA key A5F0F63139165E0049B30010480EFDFDD6E35953
+gpg: Good signature from "Dr0-ozdik777 (for lab09) <i.drozd0509@gmail.com>" [ultimate]
+
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git show v0.1.0
+tag v0.1.0
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
+ ^X
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
+:
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
+:
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+tag v0.1.0
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
+
+tag v0.1.0
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
+:
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
+:
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
+:
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
+:
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git push
++Username for 'https://github.com': Dr0-ozdik777
++Password for 'https://Dr0-ozdik777@github.com': 
++Enumerating objects: 9, done.
++Counting objects: 100% (9/9), done.
+:
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git push
++Username for 'https://github.com': Dr0-ozdik777
++Password for 'https://Dr0-ozdik777@github.com': 
++Enumerating objects: 9, done.
++Counting objects: 100% (9/9), done.
++Delta compression using up to 4 threads
+:
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git push
++Username for 'https://github.com': Dr0-ozdik777
++Password for 'https://Dr0-ozdik777@github.com': 
++Enumerating objects: 9, done.
++Counting objects: 100% (9/9), done.
++Delta compression using up to 4 threads
++Compressing objects: 100% (4/4), done.
++Writing objects: 100% (5/5), 456 bytes | 456.00 KiB/s, done.
++Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
++remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
++To https://github.com/Dr0-ozdik777/lab07
++   74c01c9..52ea073  main -> main
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds*/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cmake -B _build
++-- The CXX compiler identification is GNU 13.3.0
++-- Detecting CXX compiler ABI info
++-- Detecting CXX compiler ABI info - done
++-- Check for working CXX compiler: /usr/bin/c++ - skipped
++-- Detecting CXX compile features
++-- Detecting CXX compile features - done
++-- The C compiler identification is GNU 13.3.0
++-- Detecting C compiler ABI info
++-- Detecting C compiler ABI info - done
++-- Check for working C compiler: /usr/bin/cc - skipped
++-- Detecting C compile features
++-- Detecting C compile features - done
++-- Found Python: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
++-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
++-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
++-- Found Threads: TRUE  
++-- Configuring done (8.1s)
++-- Generating done (0.0s)
++-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/lab08/_build
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cmake --build _build
++[  7%] Building CXX object CMakeFiles/print.dir/print.cpp.o
++[ 14%] Linking CXX static library libprint.a
++[ 14%] Built target print
++[ 21%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
++[ 28%] Linking CXX static library ../../../lib/libgtest.a
++[ 28%] Built target gtest
++[ 35%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
++[ 42%] Linking CXX static library ../../../lib/libgtest_main.a
++[ 42%] Built target gtest_main
++[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o
++[ 57%] Linking CXX executable check
++[ 57%] Built target check
++[ 64%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
++[ 71%] Linking CXX executable demo
++[ 71%] Built target demo
++[ 78%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
++[ 85%] Linking CXX static library ../../../lib/libgmock.a
++[ 85%] Built target gmock
++[ 92%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
++[100%] Linking CXX static library ../../../lib/libgmock_main.a
++[100%] Built target gmock_main
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ ls
++]             cmake              demo         LB06.txt   print1.cpp  README.md
++_build        CMakeLists.txt     DESCRIPTION  LB_07.txt  print.cpp   tests
++ChangeLog.md  CPackConfig.cmake  LB_05.txt    _logs      print.hpp   tools
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _build _builds
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_build/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "*.a" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "*.o" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Add project source files"
++[main a644b31] Add project source files
++ 514 files changed, 6 insertions(+), 28774 deletions(-)
++ delete mode 100644 _builds/CMakeCache.txt
++ delete mode 100644 _builds/CMakeFiles/3.28.3/CMakeCCompiler.cmake
++ delete mode 100644 _builds/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake
++ delete mode 100755 _builds/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin
++ delete mode 100755 _builds/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin
++ delete mode 100644 _builds/CMakeFiles/3.28.3/CMakeSystem.cmake
++ delete mode 100644 _builds/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c
++ delete mode 100755 _builds/CMakeFiles/3.28.3/CompilerIdC/a.out
++ delete mode 100644 _builds/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp
++ delete mode 100755 _builds/CMakeFiles/3.28.3/CompilerIdCXX/a.out
++ delete mode 100644 _builds/CMakeFiles/CMakeConfigureLog.yaml
++ delete mode 100644 _builds/CMakeFiles/CMakeDirectoryInformation.cmake
++ delete mode 100644 _builds/CMakeFiles/Makefile.cmake
++ delete mode 100644 _builds/CMakeFiles/Makefile2
++ delete mode 100644 _builds/CMakeFiles/TargetDirectories.txt
++ delete mode 100644 _builds/CMakeFiles/check.dir/DependInfo.cmake
++ delete mode 100644 _builds/CMakeFiles/check.dir/build.make
++ delete mode 100644 _builds/CMakeFiles/check.dir/cmake_clean.cmake
++ delete mode 100644 _builds/CMakeFiles/check.dir/compiler_depend.make
++ delete mode 100644 _builds/CMakeFiles/check.dir/compiler_depend.ts
++ delete mode 100644 _builds/CMakeFiles/check.dir/depend.make
++ delete mode 100644 _builds/CMakeFiles/check.dir/flags.make
++ delete mode 100644 _builds/CMakeFiles/check.dir/link.txt
++ delete mode 100644 _builds/CMakeFiles/check.dir/progress.make
++ delete mode 100644 _builds/CMakeFiles/check.dir/tests/test1.cpp.o
++ delete mode 100644 _builds/CMakeFiles/check.dir/tests/test1.cpp.o.d
++ delete mode 100644 _builds/CMakeFiles/cmake.check_cache
++ delete mode 100644 _builds/CMakeFiles/print.dir/DependInfo.cmake
++ delete mode 100644 _builds/CMakeFiles/print.dir/build.make
++ delete mode 100644 _builds/CMakeFiles/print.dir/cmake_clean.cmake
++ delete mode 100644 _builds/CMakeFiles/print.dir/cmake_clean_target.cmake
++ delete mode 100644 _builds/CMakeFiles/print.dir/compiler_depend.make
++ delete mode 100644 _builds/CMakeFiles/print.dir/compiler_depend.ts
++ delete mode 100644 _builds/CMakeFiles/print.dir/depend.make
++ delete mode 100644 _builds/CMakeFiles/print.dir/flags.make
++ delete mode 100644 _builds/CMakeFiles/print.dir/link.txt
++ delete mode 100644 _builds/CMakeFiles/print.dir/print.cpp.o
++ delete mode 100644 _builds/CMakeFiles/print.dir/print.cpp.o.d
++ delete mode 100644 _builds/CMakeFiles/print.dir/progress.make
++ delete mode 100644 _builds/CMakeFiles/progress.marks
++ delete mode 100644 _builds/CTestTestfile.cmake
++ delete mode 100644 _builds/Makefile
++ delete mode 100644 _builds/Testing/Temporary/CTestCostData.txt
++ delete mode 100644 _builds/Testing/Temporary/LastTest.log
++ delete mode 100644 _builds/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake
++ delete mode 100644 _builds/_deps/googletest-build/CMakeFiles/progress.marks
++ delete mode 100644 _builds/_deps/googletest-build/CTestTestfile.cmake
++ delete mode 100644 _builds/_deps/googletest-build/Makefile
++ delete mode 100644 _builds/_deps/googletest-build/cmake_install.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/progress.marks
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/CTestTestfile.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/Makefile
++ delete mode 100644 _builds/_deps/googletest-build/googlemock/cmake_install.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
++ delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+
+tag v0.1.0
+tag v0.1.0
+tag v0.1.0
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+commit d172a7267eb713fd667f63a2ac8d072c451354d4 (HEAD -> main, tag: v0.1.0)
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+diff --git a/LB_08_1.txt b/LB_08_1.txt
+new file mode 100644
+index 0000000..b1cb044
+--- /dev/null
++++ b/LB_08_1.txt
+@@ -0,0 +1,3616 @@
++ivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI
++Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)
++
++ * Documentation:  https://help.ubuntu.com
++ * Management:     https://landscape.canonical.com
++ * Support:        https://ubuntu.com/pro
++
++ubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777
++ubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .
++~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08
++Cloning into 'lab08'...
++remote: Enumerating objects: 475, done.
++remote: Counting objects: 100% (475/475), done.
++remote: Compressing objects: 100% (200/200), done.
++remote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)
++Receiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.
++Resolving deltas: 100% (241/241), done.
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src
++rm '_builds/_deps/googletest-src'
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"
++[main 52ea073] Remove embedded git repo
++ 2 files changed, 1 insertion(+), 1 deletion(-)
++ delete mode 160000 _builds/_deps/googletest-src
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git push
++Username for 'https://github.com': Dr0-ozdik777
++Password for 'https://Dr0-ozdik777@github.com': 
++Enumerating objects: 9, done.
++Counting objects: 100% (9/9), done.
++Delta compression using up to 4 threads
++Compressing objects: 100% (4/4), done.
++Writing objects: 100% (5/5), 456 bytes | 456.00 KiB/s, done.
++Total 5 (delta 2), reused 0 (delta 0), pack-reused 0
++remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
++To https://github.com/Dr0-ozdik777/lab07
++   74c01c9..52ea073  main -> main
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds*/" >> .gitignore
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cmake -B _build
++-- The CXX compiler identification is GNU 13.3.0
++-- Detecting CXX compiler ABI info
++-- Detecting CXX compiler ABI info - done
++-- Check for working CXX compiler: /usr/bin/c++ - skipped
++-- Detecting CXX compile features
++-- Detecting CXX compile features - done
++-- The C compiler identification is GNU 13.3.0
++-- Detecting C compiler ABI info
++-- Detecting C compiler ABI info - done
++-- Check for working C compiler: /usr/bin/cc - skipped
++-- Detecting C compile features
++-- Detecting C compile features - done
++-- Found Python: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
++-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
++-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
++-- Found Threads: TRUE  
++-- Configuring done (8.1s)
++-- Generating done (0.0s)
++-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/lab08/_build
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cmake --build _build
++[  7%] Building CXX object CMakeFiles/print.dir/print.cpp.o
++[ 14%] Linking CXX static library libprint.a
++[ 14%] Built target print
++[ 21%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
++[ 28%] Linking CXX static library ../../../lib/libgtest.a
++[ 28%] Built target gtest
++[ 35%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
++[ 42%] Linking CXX static library ../../../lib/libgtest_main.a
++[ 42%] Built target gtest_main
++[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o
++[ 57%] Linking CXX executable check
++[ 57%] Built target check
++[ 64%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
++[ 71%] Linking CXX executable demo
++[ 71%] Built target demo
++[ 78%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
++[ 85%] Linking CXX static library ../../../lib/libgmock.a
++[ 85%] Built target gmock
++[ 92%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o
++[100%] Linking CXX static library ../../../lib/libgmock_main.a
++[100%] Built target gmock_main
++ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init
++fatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ cmake --build _build --target clean
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git push origin master --tags
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/Dr0-ozdik777/lab09'
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git push origin main --tags
+Username for 'https://github.com': Dr0-ozdik777
+Password for 'https://Dr0-ozdik777@github.com': 
+Enumerating objects: 491, done.
+Counting objects: 100% (491/491), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (206/206), done.
+Writing objects: 100% (491/491), 2.72 MiB | 5.27 MiB/s, done.
+Total 491 (delta 247), reused 490 (delta 247), pack-reused 0
+remote: Resolving deltas: 100% (247/247), done.
+To https://github.com/Dr0-ozdik777/lab09
+ * [new branch]      main -> main
+ * [new tag]         v0.1.0 -> v0.1.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release --version
+github-release v0.10.1
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release info -u ${GITHUB_USERNAME} -r lab09
+Error: Invalid trailing arguments: [lab09]
+Usage: github-release [global options] <verb> [verb options]
+
+Global options:
+        -h, --help                   Show this help
+        -v, --verbose                Be verbose
+        -q, --quiet                  Do not print anything, even errors (except if --verbose is specified)
+            --version                Print version
+
+Verbs:
+    delete:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag of release to delete (*)
+    download:
+        -s, --security-token         Github token ($GITHUB_TOKEN if set). required if repo is private.
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -l, --latest                 Download latest release (required if tag is not specified)
+        -t, --tag                    Git tag to download from (required if latest is not specified) (*)
+        -n, --name                   Name of the file (*)
+    edit:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to edit the release of (*)
+        -n, --name                   New name of the release (defaults to tag)
+        -d, --description            New release description, use - for reading a description from stdin (defaults to tag)
+            --draft                  The release is a draft
+        -p, --pre-release            The release is a pre-release
+    info:
+        -s, --security-token         Github token ($GITHUB_TOKEN if set). required if repo is private.
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to query (optional)
+        -j, --json                   Emit info as JSON instead of text
+    release:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to create a release from (*)
+        -n, --name                   Name of the release (defaults to tag)
+        -d, --description            Release description, use - for reading a description from stdin (defaults to tag)
+        -c, --target                 Commit SHA or branch to create release of (defaults to the repository default branch)
+            --draft                  The release is a draft
+        -p, --pre-release            The release is a pre-release
+        -g, --generate-release-notes Generate name and description if not given
+    upload:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to upload to (*)
+        -n, --name                   Name of the file (*)
+        -l, --label                  Label (description) of the file
+        -f, --file                   File to upload (use - for stdin) (*)
+        -R, --replace                Replace asset with same name if it already exists (WARNING: not atomic, failure to upload will remove the original asset too)
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_OS=`uname -s` PACKAGE_ARCH=`uname -m` 
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_FILENAME=print-${PACKAGE_OS}-${PACKAGE_ARCH}.tar.gz
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ ls
+ ]                  cmake               DESCRIPTION   LB_07.txt     print.cpp   tools
+'aux | grep less'   CMakeLists.txt      Dockerfile    LB_08_1.txt   print.hpp
+ _build             CPackConfig.cmake   LB_05.txt     _logs         README.md
+ ChangeLog.md       demo                LB06.txt      print1.cpp    tests
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_OS=`uname -s` PACKAGE_ARCH=`uname -m` 
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_FILENAME=print-${PACKAGE_OS}-${PACKAGE_ARCH}.tar.gz
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release upload \
+    --user ${GITHUB_USERNAME} \
+    --repo lab09 \
+    --tag v0.1.0 \
+    --name "${PACKAGE_FILENAME}" \
+    --file _build/*.tar.gz
+Error: Invalid trailing arguments: [lab09 --tag v0.1.0 --name print-Linux-aarch64.tar.gz --file _build/print-0.1.0-Linux.tar.gz]
+Usage: github-release [global options] <verb> [verb options]
+
+Global options:
+        -h, --help                   Show this help
+        -v, --verbose                Be verbose
+        -q, --quiet                  Do not print anything, even errors (except if --verbose is specified)
+            --version                Print version
+
+Verbs:
+    delete:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag of release to delete (*)
+    download:
+        -s, --security-token         Github token ($GITHUB_TOKEN if set). required if repo is private.
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -l, --latest                 Download latest release (required if tag is not specified)
+        -t, --tag                    Git tag to download from (required if latest is not specified) (*)
+        -n, --name                   Name of the file (*)
+    edit:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to edit the release of (*)
+        -n, --name                   New name of the release (defaults to tag)
+        -d, --description            New release description, use - for reading a description from stdin (defaults to tag)
+            --draft                  The release is a draft
+        -p, --pre-release            The release is a pre-release
+    info:
+        -s, --security-token         Github token ($GITHUB_TOKEN if set). required if repo is private.
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to query (optional)
+        -j, --json                   Emit info as JSON instead of text
+    release:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to create a release from (*)
+        -n, --name                   Name of the release (defaults to tag)
+        -d, --description            Release description, use - for reading a description from stdin (defaults to tag)
+        -c, --target                 Commit SHA or branch to create release of (defaults to the repository default branch)
+            --draft                  The release is a draft
+        -p, --pre-release            The release is a pre-release
+        -g, --generate-release-notes Generate name and description if not given
+    upload:
+        -s, --security-token         Github token (required if $GITHUB_TOKEN not set)
+        -u, --user                   Github repo user or organisation (required if $GITHUB_USER not set)
+        -a, --auth-user              Username for authenticating to the API (falls back to $GITHUB_AUTH_USER or $GITHUB_USER)
+        -r, --repo                   Github repo (required if $GITHUB_REPO not set)
+        -t, --tag                    Git tag to upload to (*)
+        -n, --name                   Name of the file (*)
+        -l, --label                  Label (description) of the file
+        -f, --file                   File to upload (use - for stdin) (*)
+        -R, --replace                Replace asset with same name if it already exists (WARNING: not atomic, failure to upload will remove the original asset too)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git tag -d v0.1.0.0
+error: tag 'v0.1.0.0' not found.
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git tag
+v0.1.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ ls -l _build/*.tar.gz
+-rw-rw-r-- 1 ubuntu ubuntu 763207 May 25 23:11 _build/print-0.1.0-Linux.tar.gz
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release --version
+github-release v0.10.1
+
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ echo "User: ${GITHUB_USERNAME}, Repo: lab09, Tag: v0.1.0"
+User: , Repo: lab09, Tag: v0.1.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export GITHUB_USERNAME="Dr0-ozdik777"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export GITHUB_TOKEN="*****"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ echo "User: ${GITHUB_USERNAME}, Repo: lab09, Tag: v0.1.0"
+User: Dr0-ozdik777, Repo: lab09, Tag: v0.1.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release release \
+    --user "${GITHUB_USERNAME}" \
+    --repo "lab09" \
+    --tag "v0.1.0" \
+    --name "libprint" \
+    --description "my first release" \
+    --security-token "${GITHUB_TOKEN}"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_OS=$(uname -s)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_ARCH=$(uname -m)
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ export PACKAGE_FILENAME="print-${PACKAGE_OS}-${PACKAGE_ARCH}.tar.gz"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ ls -l _build/*.tar.gz
+-rw-rw-r-- 1 ubuntu ubuntu 763207 May 25 23:11 _build/print-0.1.0-Linux.tar.gz
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release upload \
+    --user "${GITHUB_USERNAME}" \
+    --repo "lab09" \
+    --tag "v0.1.0" \
+    --name "${PACKAGE_FILENAME}" \
+    --file "_build/print-0.1.0-Linux.tar.gz" \
+    --security-token "${GITHUB_TOKEN}"
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ github-release info \
+    --user "${GITHUB_USERNAME}" \
+    --repo "lab09" \
+    --tag "v0.1.0" \
+    --security-token "${GITHUB_TOKEN}"
+tags:
+- v0.1.0 (commit: https://api.github.com/repos/Dr0-ozdik777/lab09/commits/d172a7267eb713fd667f63a2ac8d072c451354d4)
+releases:
+- v0.1.0, name: 'libprint', description: 'my first release', id: 220874388, tagged: 25/05/2025 at 20:17, published: 25/05/2025 at 20:30, draft: ✗, prerelease: ✗
+  - artifact: print-Linux-aarch64.tar.gz, downloads: 0, state: uploaded, type: application/octet-stream, size: 763 kB, id: 258030963
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ wget https://github.com/${GITHUB_USERNAME}/lab09/releases/download/v0.1.0.0/${PACKAGE_FILENAME}
+--2025-05-25 23:32:49--  https://github.com/Dr0-ozdik777/lab09/releases/download/v0.1.0.0/print-Linux-aarch64.tar.gz
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2025-05-25 23:32:49 ERROR 404: Not Found.
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ git tag
+v0.1.0
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ wget "https://github.com/Dr0-ozdik777/lab09/releases/download/v0.1.0/print-Linux-aarch64.tar.gz"
+--2025-05-25 23:33:36--  https://github.com/Dr0-ozdik777/lab09/releases/download/v0.1.0/print-Linux-aarch64.tar.gz
+Resolving github.com (github.com)... 140.82.121.3
+Connecting to github.com (github.com)|140.82.121.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/990237073/bde24e99-59b3-42be-a131-b7b892e029e7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250525%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250525T203336Z&X-Amz-Expires=300&X-Amz-Signature=0dbfa221fc003194e6f0bf2720ce13935fb21a02b134fe32a46a4e8e0c31bfbf&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dprint-Linux-aarch64.tar.gz&response-content-type=application%2Foctet-stream [following]
+--2025-05-25 23:33:36--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/990237073/bde24e99-59b3-42be-a131-b7b892e029e7?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20250525%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20250525T203336Z&X-Amz-Expires=300&X-Amz-Signature=0dbfa221fc003194e6f0bf2720ce13935fb21a02b134fe32a46a4e8e0c31bfbf&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3Dprint-Linux-aarch64.tar.gz&response-content-type=application%2Foctet-stream
+Resolving objects.githubusercontent.com (objects.githubusercontent.com)... 185.199.111.133, 185.199.108.133, 185.199.110.133, ...
+Connecting to objects.githubusercontent.com (objects.githubusercontent.com)|185.199.111.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 763207 (745K) [application/octet-stream]
+Saving to: ‘print-Linux-aarch64.tar.gz’
+
+print-Linux-aarch64.tar.g 100%[===================================>] 745.32K  4.34MB/s    in 0.2s    
+
+2025-05-25 23:33:37 (4.34 MB/s) - ‘print-Linux-aarch64.tar.gz’ saved [763207/763207]
+
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ tar -ztf ${PACKAGE_FILENAME}
+print-0.1.0-Linux/lib/
+print-0.1.0-Linux/lib/libgmock.a
+print-0.1.0-Linux/lib/libgmock_main.a
+print-0.1.0-Linux/lib/libgtest.a
+print-0.1.0-Linux/lib/libprint.a
+print-0.1.0-Linux/lib/pkgconfig/
+print-0.1.0-Linux/lib/pkgconfig/gtest_main.pc
+print-0.1.0-Linux/lib/pkgconfig/gtest.pc
+print-0.1.0-Linux/lib/pkgconfig/gmock_main.pc
+print-0.1.0-Linux/lib/pkgconfig/gmock.pc
+print-0.1.0-Linux/lib/cmake/
+print-0.1.0-Linux/lib/cmake/GTest/
+print-0.1.0-Linux/lib/cmake/GTest/GTestConfig.cmake
+print-0.1.0-Linux/lib/cmake/GTest/GTestConfigVersion.cmake
+print-0.1.0-Linux/lib/cmake/GTest/GTestTargets-noconfig.cmake
+print-0.1.0-Linux/lib/cmake/GTest/GTestTargets.cmake
+print-0.1.0-Linux/lib/libgtest_main.a
+print-0.1.0-Linux/include/
+print-0.1.0-Linux/include/gtest/
+print-0.1.0-Linux/include/gtest/gtest-matchers.h
+print-0.1.0-Linux/include/gtest/gtest.h
+print-0.1.0-Linux/include/gtest/gtest-typed-test.h
+print-0.1.0-Linux/include/gtest/gtest-param-test.h
+print-0.1.0-Linux/include/gtest/gtest_pred_impl.h
+print-0.1.0-Linux/include/gtest/gtest-spi.h
+print-0.1.0-Linux/include/gtest/gtest-assertion-result.h
+print-0.1.0-Linux/include/gtest/gtest-test-part.h
+print-0.1.0-Linux/include/gtest/gtest-death-test.h
+print-0.1.0-Linux/include/gtest/internal/
+print-0.1.0-Linux/include/gtest/internal/gtest-death-test-internal.h
+print-0.1.0-Linux/include/gtest/internal/custom/
+print-0.1.0-Linux/include/gtest/internal/custom/gtest.h
+print-0.1.0-Linux/include/gtest/internal/custom/README.md
+print-0.1.0-Linux/include/gtest/internal/custom/gtest-port.h
+print-0.1.0-Linux/include/gtest/internal/custom/gtest-printers.h
+print-0.1.0-Linux/include/gtest/internal/gtest-param-util.h
+print-0.1.0-Linux/include/gtest/internal/gtest-type-util.h
+print-0.1.0-Linux/include/gtest/internal/gtest-internal.h
+print-0.1.0-Linux/include/gtest/internal/gtest-port-arch.h
+print-0.1.0-Linux/include/gtest/internal/gtest-string.h
+print-0.1.0-Linux/include/gtest/internal/gtest-port.h
+print-0.1.0-Linux/include/gtest/internal/gtest-filepath.h
+print-0.1.0-Linux/include/gtest/gtest-message.h
+print-0.1.0-Linux/include/gtest/gtest_prod.h
+print-0.1.0-Linux/include/gtest/gtest-printers.h
+print-0.1.0-Linux/include/gmock/
+print-0.1.0-Linux/include/gmock/internal/
+print-0.1.0-Linux/include/gmock/internal/gmock-internal-utils.h
+print-0.1.0-Linux/include/gmock/internal/gmock-pp.h
+print-0.1.0-Linux/include/gmock/internal/custom/
+print-0.1.0-Linux/include/gmock/internal/custom/README.md
+print-0.1.0-Linux/include/gmock/internal/custom/gmock-matchers.h
+print-0.1.0-Linux/include/gmock/internal/custom/gmock-generated-actions.h
+print-0.1.0-Linux/include/gmock/internal/custom/gmock-port.h
+print-0.1.0-Linux/include/gmock/internal/gmock-port.h
+print-0.1.0-Linux/include/gmock/gmock-matchers.h
+print-0.1.0-Linux/include/gmock/gmock-more-actions.h
+print-0.1.0-Linux/include/gmock/gmock.h
+print-0.1.0-Linux/include/gmock/gmock-spec-builders.h
+print-0.1.0-Linux/include/gmock/gmock-nice-strict.h
+print-0.1.0-Linux/include/gmock/gmock-actions.h
+print-0.1.0-Linux/include/gmock/gmock-cardinalities.h
+print-0.1.0-Linux/include/gmock/gmock-function-mocker.h
+print-0.1.0-Linux/include/gmock/gmock-more-matchers.h
+print-0.1.0-Linux/bin/
+print-0.1.0-Linux/bin/demo
+ubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/projects/lab09$ 
