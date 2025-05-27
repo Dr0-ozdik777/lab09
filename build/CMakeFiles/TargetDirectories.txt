@@ -1,0 +1,12 @@
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/print.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/check.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/demo.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/package.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/package_source.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/test.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/list_install_components.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/install.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/install/local.dir
+/home/ubuntu/Dr0-ozdik777/workspace/projects/lab09/build/CMakeFiles/install/strip.dir
