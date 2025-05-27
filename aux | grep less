@@ -1,0 +1,774 @@
+[33mtag v0.1.0[m
+Tagger: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 23:17:29 2025 +0300
+
+Version 0.1.0 initial release
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEpfD2MTkWXgBJswAQSA79/dbjWVMFAmgzetkACgkQSA79/dbj
+WVNaRQ//eiFqxewue5QnRVhG0T5LaqGJqygkX4JbcZbq/ij8d3ljZNWEZhBfHoJN
+ebLwLyL3djDtM3qZcgz6aXZNQkuIvsoVneR3mCyhzZZ+BZtBHjtbh1BQ9W6vd/0h
+9DIUalmYb9ysh12WhRshuixp9Y1Z82OMzXFDWrqxM9dNadGeeYLg+8SACWtUE1ap
+ye7pmtficr2oH/YCY6cN+IGHfV6oPcjlNm7OTgNeZ4mneqizNF10X3faPG1QXvLL
+PULh3T6T4W1PVSXdEz2n8jZBstUBY+VX6wu0T/We+syHHAuc0NLa0oHIVX6Xl11Y
+PzfukXX7R5j/lrFxgw36KjIzoHbVfY0s3UVik/0S6HeE0KfPuJYUKr7qSapyRPlB
+oMbmyUN7ZLjd5tMAnaWbqkSNSoCKzOBharptpfDmnG/S3X3rEIJPoVDHnPMlCP3/
+B6l6oObUvn52pzR84ftqkY5suJVa8X6Zd1cuGZSLPgH196U53hig7ynSoTUYR30x
+W0OiYgX71gUhmv8GwmYTnAysrBTBUiMuvEzBUxWyVxAFQGrt0ceBsZd0g58zmYDR
+WCF7M83VgQ6wcSmG7dJlzpog3hrjiJWJNGI2Rz3Png2NxC/HKAtRnAIbKQ0GOaYV
+esTppkhE5mNmHwscUIUzdbP9jYDf1Rd1bgn7Uf9G6eH2WOJp6CI=
+=W33o
+-----END PGP SIGNATURE-----
+
+[33mcommit d172a7267eb713fd667f63a2ac8d072c451354d4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;33mtag: [m[1;33mv0.1.0[m[33m)[m
+Author: Dr0-ozdik777 <i.drozd0509@gmail.com>
+Date:   Sun May 25 22:17:00 2025 +0300
+
+    Add files via upload
+
+[1mdiff --git a/LB_08_1.txt b/LB_08_1.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b1cb044[m
+[1m--- /dev/null[m
+[1m+++ b/LB_08_1.txt[m
+[36m@@ -0,0 +1,3616 @@[m
+[32m+[m[32mivandrozd@Dr0ozdik ~ % multipass shell Ubuntu-GUI[m
+[32m+[m[32mWelcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic aarch64)[m
+[32m+[m
+[32m+[m[32m * Documentation:  https://help.ubuntu.com[m
+[32m+[m[32m * Management:     https://landscape.canonical.com[m
+[32m+[m[32m * Support:        https://ubuntu.com/pro[m
+[32m+[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~$  export GITHUB_USERNAME=Dr0-ozdik777[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~$ cd Dr0-ozdik777/workspace[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ pushd .[m
+[32m+[m[32m~/Dr0-ozdik777/workspace ~/Dr0-ozdik777/workspace[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ source scripts/activate[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ git clone https://github.com/Dr0-ozdik777/lab07 lab08[m
+[32m+[m[32mCloning into 'lab08'...[m
+[32m+[m[32mremote: Enumerating objects: 475, done.[m
+[32m+[m[32mremote: Counting objects: 100% (475/475), done.[m
+[32m+[m[32mremote: Compressing objects: 100% (200/200), done.[m
+[32m+[m[32mremote: Total 475 (delta 241), reused 467 (delta 238), pack-reused 0 (from 0)[m
+[32m+[m[32mReceiving objects: 100% (475/475), 2.68 MiB | 4.03 MiB/s, done.[m
+[32m+[m[32mResolving deltas: 100% (241/241), done.[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace$ cd lab08[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init[m
+[32m+[m[32mfatal: No url found for submodule path '_builds/_deps/googletest-src' in .gitmodules[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git rm --cached _builds/_deps/googletest-src[m
+[32m+[m[32mrm '_builds/_deps/googletest-src'[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds/_deps/googletest-src/.git[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Remove embedded git repo"[m
+[32m+[m[32m[main 52ea073] Remove embedded git repo[m
+[32m+[m[32m 2 files changed, 1 insertion(+), 1 deletion(-)[m
+[32m+[m[32m delete mode 160000 _builds/_deps/googletest-src[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git push[m
+[32m+[m[32mUsername for 'https://github.com': Dr0-ozdik777[m
+[32m+[m[32mPassword for 'https://Dr0-ozdik777@github.com':[m[41m [m
+[32m+[m[32mEnumerating objects: 9, done.[m
+[32m+[m[32mCounting objects: 100% (9/9), done.[m
+[32m+[m[32mDelta compression using up to 4 threads[m
+[32m+[m[32mCompressing objects: 100% (4/4), done.[m
+[32m+[m[32mWriting objects: 100% (5/5), 456 bytes | 456.00 KiB/s, done.[m
+[32m+[m[32mTotal 5 (delta 2), reused 0 (delta 0), pack-reused 0[m
+[32m+[m[32mremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[m
+[32m+[m[32mTo https://github.com/Dr0-ozdik777/lab07[m
+[32m+[m[32m   74c01c9..52ea073  main -> main[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init[m
+[32m+[m[32mfatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _builds[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds*/" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cmake -B _build[m
+[32m+[m[32m-- The CXX compiler identification is GNU 13.3.0[m
+[32m+[m[32m-- Detecting CXX compiler ABI info[m
+[32m+[m[32m-- Detecting CXX compiler ABI info - done[m
+[32m+[m[32m-- Check for working CXX compiler: /usr/bin/c++ - skipped[m
+[32m+[m[32m-- Detecting CXX compile features[m
+[32m+[m[32m-- Detecting CXX compile features - done[m
+[32m+[m[32m-- The C compiler identification is GNU 13.3.0[m
+[32m+[m[32m-- Detecting C compiler ABI info[m
+[32m+[m[32m-- Detecting C compiler ABI info - done[m
+[32m+[m[32m-- Check for working C compiler: /usr/bin/cc - skipped[m
+[32m+[m[32m-- Detecting C compile features[m
+[32m+[m[32m-- Detecting C compile features - done[m
+[32m+[m[32m-- Found Python: /usr/bin/python3 (found version "3.12.3") found components: Interpreter[m[41m [m
+[32m+[m[32m-- Performing Test CMAKE_HAVE_LIBC_PTHREAD[m
+[32m+[m[32m-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success[m
+[32m+[m[32m-- Found Threads: TRUE[m[41m  [m
+[32m+[m[32m-- Configuring done (8.1s)[m
+[32m+[m[32m-- Generating done (0.0s)[m
+[32m+[m[32m-- Build files have been written to: /home/ubuntu/Dr0-ozdik777/workspace/lab08/_build[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cmake --build _build[m
+[32m+[m[32m[  7%] Building CXX object CMakeFiles/print.dir/print.cpp.o[m
+[32m+[m[32m[ 14%] Linking CXX static library libprint.a[m
+[32m+[m[32m[ 14%] Built target print[m
+[32m+[m[32m[ 21%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[m
+[32m+[m[32m[ 28%] Linking CXX static library ../../../lib/libgtest.a[m
+[32m+[m[32m[ 28%] Built target gtest[m
+[32m+[m[32m[ 35%] Building CXX object _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[m
+[32m+[m[32m[ 42%] Linking CXX static library ../../../lib/libgtest_main.a[m
+[32m+[m[32m[ 42%] Built target gtest_main[m
+[32m+[m[32m[ 50%] Building CXX object CMakeFiles/check.dir/tests/test1.cpp.o[m
+[32m+[m[32m[ 57%] Linking CXX executable check[m
+[32m+[m[32m[ 57%] Built target check[m
+[32m+[m[32m[ 64%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o[m
+[32m+[m[32m[ 71%] Linking CXX executable demo[m
+[32m+[m[32m[ 71%] Built target demo[m
+[32m+[m[32m[ 78%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[m
+[32m+[m[32m[ 85%] Linking CXX static library ../../../lib/libgmock.a[m
+[32m+[m[32m[ 85%] Built target gmock[m
+[32m+[m[32m[ 92%] Building CXX object _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[m
+[32m+[m[32m[100%] Linking CXX static library ../../../lib/libgmock_main.a[m
+[32m+[m[32m[100%] Built target gmock_main[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init[m
+[32m+[m[32mfatal: No url found for submodule path '_builds/clang-cxx14/_deps/googletest-src' in .gitmodules[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ ls[m
+[32m+[m[32m]             cmake              demo         LB06.txt   print1.cpp  README.md[m
+[32m+[m[32m_build        CMakeLists.txt     DESCRIPTION  LB_07.txt  print.cpp   tests[m
+[32m+[m[32mChangeLog.md  CPackConfig.cmake  LB_05.txt    _logs      print.hpp   tools[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ rm -rf _build _builds[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_build/" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "_builds/" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "*.a" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ echo "*.o" >> .gitignore[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git add .[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git commit -m "Add project source files"[m
+[32m+[m[32m[main a644b31] Add project source files[m
+[32m+[m[32m 514 files changed, 6 insertions(+), 28774 deletions(-)[m
+[32m+[m[32m delete mode 100644 _builds/CMakeCache.txt[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/3.28.3/CMakeCCompiler.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake[m
+[32m+[m[32m delete mode 100755 _builds/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin[m
+[32m+[m[32m delete mode 100755 _builds/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/3.28.3/CMakeSystem.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c[m
+[32m+[m[32m delete mode 100755 _builds/CMakeFiles/3.28.3/CompilerIdC/a.out[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp[m
+[32m+[m[32m delete mode 100755 _builds/CMakeFiles/3.28.3/CompilerIdCXX/a.out[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/CMakeConfigureLog.yaml[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/Makefile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/Makefile2[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/TargetDirectories.txt[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/tests/test1.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/check.dir/tests/test1.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/cmake.check_cache[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/print.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/print.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/print.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/Testing/Temporary/CTestCostData.txt[m
+[32m+[m[32m delete mode 100644 _builds/Testing/Temporary/LastTest.log[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googlemock/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/generated/GTestConfig.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/generated/gmock.pc[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/generated/gmock_main.pc[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/generated/gtest.pc[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-build/googletest/generated/gtest_main.pc[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeCache.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/Makefile2[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/CMakeLists.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake[m
+[32m+[m[32m delete mode 100644 _builds/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake[m
+[32m+[m[32m delete mode 100755 _builds/check[m
+[32m+[m[32m delete mode 100644 _builds/check[1]_include.cmake[m
+[32m+[m[32m delete mode 100644 _builds/check[1]_tests.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeCache.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeCCompiler.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake[m
+[32m+[m[32m delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin[m
+[32m+[m[32m delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CMakeSystem.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c[m
+[32m+[m[32m delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdC/a.out[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp[m
+[32m+[m[32m delete mode 100755 _builds/clang-cxx14/CMakeFiles/3.28.3/CompilerIdCXX/a.out[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/CMakeConfigureLog.yaml[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/Makefile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/Makefile2[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/TargetDirectories.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/tests/test1.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/check.dir/tests/test1.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/cmake.check_cache[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/demo/main.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/demo/main.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/demo.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/print.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/print.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/print.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_3rdParty/polly/saved-arguments[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googlemock/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/GTestConfig.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gmock.pc[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gmock_main.pc[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gtest.pc[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-build/googletest/generated/gtest_main.pc[m
+[32m+[m[32m delete mode 160000 _builds/clang-cxx14/_deps/googletest-src[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeCache.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/Makefile2[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/CMakeLists.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake[m
+[32m+[m[32m delete mode 100755 _builds/clang-cxx14/check[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/check[1]_include.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/check[1]_tests.cmake[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/cmake_install.cmake[m
+[32m+[m[32m delete mode 100755 _builds/clang-cxx14/demo[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/lib/libgmock.a[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/lib/libgmock_main.a[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/lib/libgtest.a[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/lib/libgtest_main.a[m
+[32m+[m[32m delete mode 100644 _builds/clang-cxx14/libprint.a[m
+[32m+[m[32m delete mode 100644 _builds/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeCache.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/3.28.3/CMakeCCompiler.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake[m
+[32m+[m[32m delete mode 100755 _builds/default/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_C.bin[m
+[32m+[m[32m delete mode 100755 _builds/default/CMakeFiles/3.28.3/CMakeDetermineCompilerABI_CXX.bin[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/3.28.3/CMakeSystem.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c[m
+[32m+[m[32m delete mode 100755 _builds/default/CMakeFiles/3.28.3/CompilerIdC/a.out[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp[m
+[32m+[m[32m delete mode 100755 _builds/default/CMakeFiles/3.28.3/CompilerIdCXX/a.out[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/CMakeConfigureLog.yaml[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Makefile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Makefile2[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/1[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/10[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/11[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/12[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/13[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/14[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/2[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/3[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/9[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/Progress/count.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/TargetDirectories.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/tests/test1.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/check.dir/tests/test1.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/cmake.check_cache[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/demo/main.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/demo.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/print.cpp.o[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/print.cpp.o.d[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/print.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/default/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/default/_3rdParty/polly/saved-arguments[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googlemock/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/CTestTestfile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/GTestConfig.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gmock.pc[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gmock_main.pc[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gtest.pc[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-build/googletest/generated/gtest_main.pc[m
+[32m+[m[32m delete mode 160000 _builds/default/_deps/googletest-src[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeCache.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/3.28.3/CMakeSystem.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/Makefile2[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeFiles/progress.marks[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/CMakeLists.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/Makefile[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitclone.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-gitupdate.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake[m
+[32m+[m[32m delete mode 100755 _builds/default/check[m
+[32m+[m[32m delete mode 100644 _builds/default/check[1]_include.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/check[1]_tests.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/cmake_install.cmake[m
+[32m+[m[32m delete mode 100644 _builds/default/lib/libgtest.a[m
+[32m+[m[32m delete mode 100644 _builds/default/lib/libgtest_main.a[m
+[32m+[m[32m delete mode 100644 _builds/default/libprint.a[m
+[32m+[m[32m delete mode 100644 _builds/file.txt[m
+[32m+[m[32m delete mode 100644 _builds/lib/libgmock.a[m
+[32m+[m[32m delete mode 100644 _builds/lib/libgmock_main.a[m
+[32m+[m[32m delete mode 100644 _builds/lib/libgtest.a[m
+[32m+[m[32m delete mode 100644 _builds/lib/libgtest_main.a[m
+[32m+[m[32m delete mode 100644 _builds/libprint.a[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git push[m
+[32m+[m[32mUsername for 'https://github.com': Dr0-ozdik777[m
+[32m+[m[32mPassword for 'https://Dr0-ozdik777@github.com':[m[41m [m
+[32m+[m[32mEnumerating objects: 5, done.[m
+[32m+[m[32mCounting objects: 100% (5/5), done.[m
+[32m+[m[32mDelta compression using up to 4 threads[m
+[32m+[m[32mCompressing objects: 100% (3/3), done.[m
+[32m+[m[32mWriting objects: 100% (3/3), 298 bytes | 298.00 KiB/s, done.[m
+[32m+[m[32mTotal 3 (delta 1), reused 0 (delta 0), pack-reused 0[m
+[32m+[m[32mremote: Resolving deltas: 100% (1/1), completed with 1 local object.[m
+[32m+[m[32mTo https://github.com/Dr0-ozdik777/lab07[m
+[32m+[m[32m   52ea073..a644b31  main -> main[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git submodule update --init[m
+[32m+[m[32mSubmodule 'tools/polly' (https://github.com/ruslo/polly) registered for path 'tools/polly'[m
+[32m+[m[32mCloning into '/home/ubuntu/Dr0-ozdik777/workspace/lab08/tools/polly'...[m
+[32m+[m[32mSubmodule path 'tools/polly': checked out 'ef7e79c2c297d456f2742fd0b976f555d058d4e0'[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote remove origin[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote add origin https://github.com/Dr0-ozdik777[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote add origin https://github.com/Dr0-ozdik777/lab08[m
+[32m+[m[32merror: remote origin already exists.[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote -v[m
+[32m+[m[32morigin	https://github.com/Dr0-ozdik777 (fetch)[m
+[32m+[m[32morigin	https://github.com/Dr0-ozdik777 (push)[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote remove origin[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote -v[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote add origin https://github.com/Dr0-ozdik777/lab08[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ git remote -v[m
+[32m+[m[32morigin	https://github.com/Dr0-ozdik777/lab08 (fetch)[m
+[32m+[m[32morigin	https://github.com/Dr0-ozdik777/lab08 (push)[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat > Dockerfile <<EOF[m
+[32m+[m[32mFROM ubuntu:18.04[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mRUN apt update[m
+[32m+[m[32mRUN apt install -yy gcc g++ cmake[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mCOPY . print/[m
+[32m+[m[32mWORKDIR print[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mRUN cmake -H. -B_build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=_install[m
+[32m+[m[32mRUN cmake --build _build[m
+[32m+[m[32mRUN cmake --build _build --target install[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mENV LOG_PATH /home/logs/log.txt[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mVOLUME /home/logs[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mWORKDIR _install/bin[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ nano Dockerfile[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ cat >> Dockerfile <<EOF[m
+[32m+[m
+[32m+[m[32mENTRYPOINT ./demo[m
+[32m+[m[32mEOF[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ docker build -t logger .[m
+[32m+[m[32mCommand 'docker' not found, but can be installed with:[m
+[32m+[m[32msudo snap install docker         # version 27.5.1, or[m
+[32m+[m[32msudo apt  install docker.io      # version 26.1.3-0ubuntu1~24.04.1[m
+[32m+[m[32msudo apt  install podman-docker  # version 4.9.3+ds1-1ubuntu0.2[m
+[32m+[m[32mSee 'snap info docker' for additional versions.[m
+[32m+[m[32mubuntu@Ubuntu-GUI:~/Dr0-ozdik777/workspace/lab08$ sudo apt  install docker.io[m[41m [m
+[32m+[m[32mReading package lists... Done[m
+[32m+[m[32mBuilding dependency tree... Done[m
+[32m+[m[32mReading state information... Done[m
+[32m+[m[32mThe following additional packages will be installed:[m
+[32m+[m[32m  bridge-utils containerd pigz runc ubuntu-fan[m
+[32m+[m[32mSuggested packages:[m
+[32m+[m[32m  ifupdown aufs-tools cgroupfs-mount | cgroup-lite debootstrap docker-buildx docker-compose-v2[m
+[32m+[m[32m  docker-doc rinse zfs-fuse | zfsutils[m
+[32m+[m[32mThe following NEW packages will be installed:[m
+[32m+[m[32m  bridge-utils containerd docker.io pigz runc ubuntu-fan[m
+[32m+[m[32m0 upgraded, 6 newly installed, 0 to remove and 84 not upgraded.[m
+[32m+[m[32mNeed to get 58.4 MB of archives.[m
+[32m+[m[32mAfter this operation, 246 MB of additional disk space will be used.[m
+[32m+[m[32mDo you want to continue? [Y/n] Y[m
+[32m+[m[32mGet:1 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 pigz arm64 2.8-1 [60.7 kB][m
+[32m+[m[32mGet:2 http://ports.ubuntu.com/ubuntu-ports noble/main arm64 bridge-utils arm64 1.7.1-1ubuntu2 [34.2 kB][m
+[32m+[m[32mGet:3 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 runc arm64 1.1.12-0ubuntu3.1 [7913 kB][m
+[32m+[m[32mGet:4 http://ports.ubuntu.com/ubuntu-ports noble-updates/main arm64 containerd arm64 1.7.24-0ubuntu1~24.04.2 [26.6 MB][m
+[32m+[m[32mGet:5 http://ports.ubuntu.com/ubuntu-ports noble-updates/universe arm64 docker.io arm64 26.1.3-0ubuntu1~24.04.1 [23.8 MB][m
+[32m+[m[32mGet:6 http://ports.ubuntu.com/ubuntu-ports noble/universe arm64 ubuntu-fan all 0.12.16 [35.2 kB][m[41m     [m
+[32m+[m[32mFetched 58.4 MB in 46s (1262 kB/s)[m[41m                                                                   [m
+[32m+[m[32mPreconfiguring packages ...[m
+[32m+[m[32mSelecting previously unselected package pigz.[m
+[32m+[m[32m(Reading database ... 222032 files and directories currently installed.)[m
+[32m+[m[32mPreparing to unpack .../0-pigz_2.8-1_arm64.deb ...[m
+[32m+[m[32mUnpacking pigz (2.8-1) ...[m
+[32m+[m[32mSelecting previously unselected package bridge-utils.[m
+[32m+[m[32mPreparing to unpack .../1-bridge-utils_1.7.1-1ubuntu2_arm64.deb ...[m
+[32m+[m[32mUnpacking bridge-utils (1.7.1-1ubuntu2) ...[m
+[32m+[m[32mSelecting previously unselected package runc.[m
+[32m+[m[32mPreparing to unpack .../2-runc_1.1.12-0ubuntu3.1_arm64.deb ...[m
+[32m+[m[32mUnpacking runc (1.1.12-0ubuntu3.1) ...[m
+[32m+[m[32mSelecting previously unselected package containerd.[m
+[32m+[m[32mPreparing to unpack .../3-containerd_1.7.24-0ubuntu1~24.04.2_arm64.deb ...[m
+[32m+[m[32mUnpacking containerd (1.7.24-0ubuntu1~24.04.2) ...[m
+[32m+[m[32mSelecting previously unselected package docker.io.[m
+[32m+[m[32mPreparing to unpack .../4-docker.io_26.1.3-0ubuntu1~24.04.1_arm64.deb ...[m
+[32m+[m[32mUnpacking docker.io (26.1.3-0ubuntu1~24.04.1) ...[m
+[32m+[m[32mSelecting previously unselected package ubuntu-fan.[m
+[32m+[m[32mPreparing to unpack .../5-ubuntu-fan_0.12.16_all.deb ...[m
+[32m+[m[32mUnpacking ubuntu-fan (0.12.16) ...[m
+[32m+[m[32mSetting up runc (1.1.12-0ubuntu3.1) ...[m
+[32m+[m[32mSetting up bridge-utils (1.7.1-1ubuntu2) ...[m
+[32m+[m[32mSetting up pigz (2.8-1) ...[m
+[32m+[m[32mSetting up containerd (1.7.24-0ubuntu1~24.04.2) ...[m
+[32m+[m[32mCreated symlink /etc/systemd/system/multi-user.target.wants/containerd.service → /usr/lib/systemd/system/containerd.service.[m
+[32m+[m[32mSetting up ubuntu-fan (0.12.16) ...[m
+[32m+[m[32mCreated symlink /etc/systemd/system/multi-user.target.wants/ubuntu-fan.service → /usr/lib/systemd/system/ubuntu-fan.service.[m
+[32m+[m[32mSetting up docker.io (26.1.3-0ubuntu1~24.04.1) 

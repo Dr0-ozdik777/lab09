@@ -1,0 +1,38 @@
+# CMake
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# CMake temp build directories
+_build*
+*/_build*
+*/*/_build*
+*/*/*/_build*
+*/*/*/*/_build*
+
+_testing
+
+# EP_BASE (install, download, build, ...)
+_Base
+
+# macosx
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+
+# emacs junk
+*.*~
+*~
+
+# Clion
+.idea/
+
+# Visual Studio
+.vs
+.vscode
+CMakeSettings.json
+
+# Default vscode python virtual env folder
+env
